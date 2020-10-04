@@ -28,8 +28,8 @@
     //Descriptors
     <string name="name">Name</string>
     <string name="nameSuggestion">NameSuggestion</string>
-    <string name="titleKenningMoniker">Title, Kenning or Moniker</string>
-    <string name="titleKenningMonikerSuggestion">Title, Kenning or Moniker Suggestion</string>
+    <string name="titleKenningMoniker">Title, Epithet or Nickname</string>
+    <string name="titleKenningMonikerSuggestion">Title, Epithet or Nickname Suggestion</string>
     <string name="race">Race</string>
     <string name="raceSuggestion">RaceSuggestion</string>
     <string name="gender">Gender</string>
@@ -55,7 +55,7 @@
     <string name="skin">Skin</string>
     <string name="skinSuggestion">Pale, Dark, Tanned, Blue, Scaled</string>
     <string name="hair">Hair</string>
-    <string name="hairSuggestion">Blond, Red, Green, Short, Long, Wavy, Spiky, Braided</string>
+    <string name="hairSuggestion">Blond, Red, Green, Short, Long, Wavy, Spiky, Braided, Mohawk</string>
     <string name="scent">Scent</string>
     <string name="scentSuggestion">ScentSuggestion</string>
     <string name="characteristicFeatures">Characteristic Features</string>
@@ -93,16 +93,16 @@
     <string name="backgroundStory">Background Story</string>
     <string name="backgroundStorySuggestions">Background StorySuggestions</string>
     //Descriptors for NPCs only
-    <string name="specialAbilities">Special Abilities</string>
-    <string name="specialAbilitiesSuggestions">Special AbilitiesSuggestions</string>
-    <string name="partOfWorld">How are they part of The World?</string>
-    <string name="partOfWorldSuggestion">How are they part of The World?Suggestions</string>
-    <string name="hooksToPlayers">Hooks to Players</string>
-    <string name="hooksToPlayersSuggestions">Hooks to PlayersSuggestions</string>
-    <string name="plotHooks">Plot Hooks</string>
-    <string name="plotHooksSuggestions">Plot HooksSuggestions</string>
-    <string name="motivations">Motivations</string>
-    <string name="motivationsSuggestions">MotivationsSuggestions</string>
+    <string name="specialAbilities" translatable="false">Special Abilities</string>
+    <string name="specialAbilitiesSuggestions" translatable="false">Special AbilitiesSuggestions</string>
+    <string name="partOfWorld" translatable="false">How are they part of The World?</string>
+    <string name="partOfWorldSuggestion" translatable="false">How are they part of The World?Suggestions</string>
+    <string name="hooksToPlayers" translatable="false">Hooks to Players</string>
+    <string name="hooksToPlayersSuggestions" translatable="false">Hooks to PlayersSuggestions</string>
+    <string name="plotHooks" translatable="false">Plot Hooks</string>
+    <string name="plotHooksSuggestions" translatable="false">Plot HooksSuggestions</string>
+    <string name="motivations" translatable="false">Motivations</string>
+    <string name="motivationsSuggestions" translatable="false">MotivationsSuggestions</string>
 
 
 
