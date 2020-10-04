@@ -2,20 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frontPageBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purpleBackgroundColour"
-    tools:context=".MainActivity" >
+    android:background="@color/purpleBackgroundColour">
 
     <TextView
-        android:id="@+id/appTitle"
+        android:id="@+id/appTitleFrontPage"
         android:layout_width="151dp"
         android:layout_height="171dp"
-        android:fontFamily="@font/bilbo"
+        android:fontFamily="sans-serif-medium"
         android:text="@string/appTitle"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/purpleTextColour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,115 +24,108 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.142" />
 
-    <EditText
-        android:id="@+id/loginPasswordEditText"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:background="#99221F3B"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/purpleTextColour"
-        android:textColorHint="@color/purpleTextColour"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPasswordText"
-        app:layout_constraintVertical_bias="0.0"
-        android:autofillHints="" />
-
     <TextView
-        android:id="@+id/loginPageUserNameText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
-        android:fontFamily="@font/bilbo"
-        android:text="@string/username"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/purpleTextColour"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.328"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appTitle" />
-
-    <EditText
-        android:id="@+id/loginUsernameEditText"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:background="#99221F3B"
-        android:hint="@string/username"
-        android:inputType="text"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/purpleTextColour"
-        android:textColorHint="@color/purpleTextColour"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPageUserNameText"
-        android:autofillHints="" />
-
-    <TextView
-        android:id="@+id/loginPasswordText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/bilbo"
-        android:text="@string/password"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/purpleTextColour"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.32"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginUsernameEditText"
-        app:layout_constraintVertical_bias="0.120000005" />
-
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="72dp"
-        android:layout_height="40dp"
-        android:background="@color/purpleButtonColour"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/login"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/purpleTextColour"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPasswordEditText"
-        app:layout_constraintVertical_bias="0.3" />
-
-    <TextView
-        android:id="@+id/loginForgotPasswordClickable"
+        android:id="@+id/charactersFrontPageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:text="@string/forgotPassword"
-        android:textColor="@color/purpleTextColour"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.357"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPasswordEditText"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="156dp"
-        android:layout_height="25dp"
-        android:layout_marginBottom="32dp"
-        android:background="#99221F3B"
-        android:text="@string/createUser"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/characters"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/purpleTextColour"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.55" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/notes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/purpleTextColour"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <TextView
+        android:id="@+id/npcsFrontPageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/NPCs"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/purpleTextColour"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.648" />
+
+    <ImageButton
+        android:id="@+id/frontPageCharButton"
+        style="@android:style/Widget.DeviceDefault.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleBackgroundColour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/charactersFrontPageText"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.552"
+        app:srcCompat="@android:drawable/ic_menu_compass" />
+
+    <ImageButton
+        android:id="@+id/frontPageNPCsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleBackgroundColour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/npcsFrontPageText"
+        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.649"
+        app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
+    <ImageButton
+        android:id="@+id/frontPageNotesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleBackgroundColour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.751"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+
+    <ImageButton
+        android:id="@+id/frontPageOverlayButton"
+        android:layout_width="51dp"
+        android:layout_height="42dp"
+        android:background="@color/purpleBackgroundColour"
+        android:tint="#993B234F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001"
+        app:srcCompat="@android:drawable/btn_dropdown" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
