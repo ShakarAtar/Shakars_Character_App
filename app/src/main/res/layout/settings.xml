@@ -35,19 +35,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.466" />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="46dp"
-        android:layout_height="21dp"
-        android:fontFamily="sans-serif-light"
-        android:switchTextAppearance="@style/TextAppearance.AppCompat.Small"
-        android:thumbTint="@color/purpleButtonColour"
+    <Spinner
+        android:id="@+id/settingsThemeSpinner"
+        android:layout_width="181dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="316dp"
+        android:background="#99221F3B"
+        android:spinnerMode="dropdown"
+        android:textColor="@color/purpleTextColour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.14"
-        app:layout_constraintStart_toEndOf="@+id/greenTheme"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.468" />
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greenTheme"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Spinner
         android:id="@+id/settingsLangaugeSpinner"
@@ -75,5 +76,5 @@
         app:layout_constraintHorizontal_bias="0.369"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/greenTheme"
-        app:layout_constraintVertical_bias="0.147" />
+        app:layout_constraintVertical_bias="0.24" />
 </androidx.constraintlayout.widget.ConstraintLayout>
