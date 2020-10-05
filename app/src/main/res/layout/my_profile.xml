@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/myProfileBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,6 +17,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/purpleTextColour"
         android:textColorHint="@color/purpleTextColour"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.436"
@@ -30,12 +32,13 @@
         android:text="@string/username"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/purpleTextColour"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.278"
+        app:layout_constraintHorizontal_bias="0.287"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.27" />
+        app:layout_constraintVertical_bias="0.269" />
 
     <TextView
         android:id="@+id/myPRfolePasswordText"
@@ -44,12 +47,13 @@
         android:text="@string/password"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/purpleTextColour"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/myProfileUsernameText"
-        app:layout_constraintVertical_bias="0.189" />
+        app:layout_constraintVertical_bias="0.19" />
 
     <EditText
         android:id="@+id/myProfileUsernameEditText"
@@ -61,6 +65,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/purpleTextColour"
         android:textColorHint="@color/purpleTextColour"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.436"
@@ -85,8 +90,8 @@
 
     <Button
         android:id="@+id/myProfileEditUser"
-        android:layout_width="55dp"
-        android:layout_height="25dp"
+        android:layout_width="54dp"
+        android:layout_height="27dp"
         android:layout_marginStart="1dp"
         android:background="@color/purpleButtonColour"
         android:text="@string/edit"
@@ -96,21 +101,21 @@
         app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toEndOf="@+id/myProfileUsernameEditText"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.303" />
+        app:layout_constraintVertical_bias="0.308" />
 
     <Button
         android:id="@+id/myProfileEditPassword"
-        android:layout_width="55dp"
-        android:layout_height="25dp"
+        android:layout_width="53dp"
+        android:layout_height="28dp"
         android:background="@color/purpleButtonColour"
         android:text="@string/edit"
         android:textColor="@color/purpleTextColour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.296"
+        app:layout_constraintHorizontal_bias="0.318"
         app:layout_constraintStart_toEndOf="@+id/myProfileUsernameEditText2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.47" />
+        app:layout_constraintVertical_bias="0.477" />
 
     <TextView
         android:id="@+id/myProfileTitle"
@@ -119,7 +124,7 @@
         android:text="@string/myProfile"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/purpleTextColour"
-        android:textSize="30sp"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
