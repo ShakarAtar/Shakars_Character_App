@@ -97,4 +97,5 @@
     <string name="motivations">Motivationer</string>
     <string name="motivationsSuggestions">Motivation Forslag</string>
     <string name="overlay_button">Overlay Knap</string>
+    <string name="charactername">characterName</string>
 </resources>

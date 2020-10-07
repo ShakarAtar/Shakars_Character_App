@@ -104,6 +104,7 @@
     <string name="motivations">Motivations</string>
     <string name="motivationsSuggestions">MotivationsSuggestions</string>
     <string name="overlay_button">Overlay Button</string>
+    <string name="charactername">characterName</string>
 
 
 </resources>
