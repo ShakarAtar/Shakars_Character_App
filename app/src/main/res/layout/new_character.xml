@@ -34,101 +34,67 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.120000005" />
 
-    <TextView
-        android:id="@+id/newCharacterCharName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hyphenationFrequency="none"
-        android:text="@string/name"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@color/purpleTextColour"
-        android:textSize="18sp"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32999998" />
+        app:layout_constraintTop_toBottomOf="@+id/newCharacterSaveButton"
+        tools:layout_editor_absoluteX="1dp">
 
-    <EditText
-        android:id="@+id/newCharacterCharNameTextInput"
-        android:layout_width="293dp"
-        android:layout_height="87dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="@string/nameSuggestion"
-        android:importantForAutofill="no"
-        android:inputType="textMultiLine"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@color/purpleTextColour"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newCharacterCharName"
-        app:layout_constraintVertical_bias="0.0" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/newCharacterKenningText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/titleKenningMoniker"
-        android:textColor="@color/purpleTextColour"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.26"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newCharacterCharNameTextInput"
-        app:layout_constraintVertical_bias="0.088" />
+            <TextView
+                android:id="@+id/newCharacterCharName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hyphenationFrequency="none"
+                android:text="@string/name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/purpleTextColour"
+                android:textSize="18sp" />
 
-    <EditText
-        android:id="@+id/newCharacterKenningsTextInput"
-        android:layout_width="293dp"
-        android:layout_height="87dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="@string/titleKenningMonikerSuggestion"
-        android:importantForAutofill="no"
-        android:inputType="textMultiLine"
-        android:textColor="@color/purpleTextColour"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newCharacterKenningText"
-        app:layout_constraintVertical_bias="0.0" />
+            <EditText
+                android:id="@+id/newCharacterCharNameTextInput"
+                android:layout_width="293dp"
+                android:layout_height="87dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/nameSuggestion"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/purpleTextColour"
+                android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/newCharacterRace"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/race"
-        android:textColor="@color/purpleTextColour"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newCharacterKenningsTextInput"
-        app:layout_constraintVertical_bias="0.089" />
+            <TextView
+                android:id="@+id/newCharacterKenningText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titleKenningMoniker"
+                android:textColor="@color/purpleTextColour"
+                android:textSize="18sp" />
 
-    <EditText
-        android:id="@+id/newCharacterRaceTextInput"
-        android:layout_width="293dp"
-        android:layout_height="87dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="@string/titleKenningMonikerSuggestion"
-        android:importantForAutofill="no"
-        android:inputType="textMultiLine"
-        android:textColor="@color/purpleTextColour"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newCharacterRace"
-        app:layout_constraintVertical_bias="0.0" />
+            <EditText
+                android:id="@+id/newCharacterKenningsTextInput"
+                android:layout_width="293dp"
+                android:layout_height="87dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/titleKenningMonikerSuggestion"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:textColor="@color/purpleTextColour" />
+
+            <include layout="@layout/indtastningselement" />
+
+            <include layout="@layout/indtastningselement" />
+
+            <include layout="@layout/indtastningselement" />
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
