@@ -62,6 +62,8 @@
     <string name="hairSuggestion">Blond, Red, Green, Short, Long, Wavy, Spiky, Braided, Mohawk</string>
     <string name="scent">Scent</string>
     <string name="scentSuggestion">ScentSuggestion</string>
+    <string name="voice">Voice</string>
+    <string name="voiceSuggestion">VoiceSuggestion</string>
     <string name="characteristicFeatures">Characteristic Features</string>
     <string name="characteristicFeaturesSuggestions">Tattoos, Scars, Birthmarks</string>
     <string name="personalityTraits">Personality Traits</string>

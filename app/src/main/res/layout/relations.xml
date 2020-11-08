@@ -11,7 +11,19 @@
     tools:showIn="@layout/new_character">
 
     <TextView
-        android:id="@+id/newCharacterFamilyText"
+        android:id="@+id/newCharacterRelations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hyphenationFrequency="none"
+        android:paddingBottom="8dp"
+        android:text="@string/relations"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/purpleTextColour"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/newCharacterFamily"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/family"
@@ -24,8 +36,70 @@
         android:layout_height="87dp"
         android:ems="10"
         android:gravity="start|top"
+        android:lines="10"
         android:hint="@string/familySuggestions"
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
         android:textColor="@color/purpleTextColour" />
+
+    <TextView
+        android:id="@+id/newCharacterAlliesAndContacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alliesAndContacts"
+        android:textColor="@color/purpleTextColour"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/newCharacterAlliesAndContactsTextInput"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:lines="10"
+        android:hint="@string/alliesAndContactsSuggestions"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:textColor="@color/purpleTextColour" />
+
+    <TextView
+        android:id="@+id/newCharacterEnemies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enemies"
+        android:textColor="@color/purpleTextColour"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/newCharacterEnemiesTextInput"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:lines="10"
+        android:hint="@string/enemiesSuggestions"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:textColor="@color/purpleTextColour" />
+
+    <TextView
+        android:id="@+id/newCharacterAffiliatedGroups"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/affiliatedGroups"
+        android:textColor="@color/purpleTextColour"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/newCharacterAffiliatedGroupTextInput"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:lines="10"
+        android:hint="@string/affiliatedGroupsSuggestions"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:textColor="@color/purpleTextColour" />
+
 </LinearLayout>

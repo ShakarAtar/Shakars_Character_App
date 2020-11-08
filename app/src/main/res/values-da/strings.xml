@@ -106,4 +106,6 @@
     <string name="npcDescriptions">Beskrivelser kun til NPCer</string>
     <string name="newCharacter">Ny Karakter</string>
     <string name="newNPC">Ny NPC</string>
+    <string name="voice">Stemme</string>
+    <string name="voiceSuggestion">Stemme Forslag</string>
 </resources>
