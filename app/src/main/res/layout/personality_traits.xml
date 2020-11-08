@@ -11,21 +11,20 @@
     tools:showIn="@layout/new_character">
 
     <TextView
-        android:id="@+id/newCharacterRace"
+        android:id="@+id/newCharacterPersonalityText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/race"
+        android:text="@string/personality"
         android:textColor="@color/purpleTextColour"
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/newCharacterRaceTextInput"
+        android:id="@+id/newCharacterPersonalityTextInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="87dp"
         android:ems="10"
-        android:lines="3"
         android:gravity="start|top"
-        android:hint="@string/titleKenningMonikerSuggestion"
+        android:hint="@string/personalitySuggestion"
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
         android:textColor="@color/purpleTextColour" />
