@@ -33,7 +33,8 @@
     <EditText
         android:id="@+id/newCharacterGoalsTextInput"
         android:layout_width="match_parent"
-        android:layout_height="87dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
         android:ems="10"
         android:gravity="start|top"
         android:lines="10"
@@ -53,7 +54,8 @@
     <EditText
         android:id="@+id/newCharacterBackgroundStoryTextInput"
         android:layout_width="match_parent"
-        android:layout_height="87dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
         android:ems="10"
         android:gravity="start|top"
         android:lines="25"

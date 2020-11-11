@@ -33,7 +33,8 @@
     <EditText
         android:id="@+id/newCharacterPersonalityTextInput"
         android:layout_width="match_parent"
-        android:layout_height="87dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
         android:ems="10"
         android:gravity="start|top"
         android:lines="3"
@@ -53,7 +54,8 @@
     <EditText
         android:id="@+id/newCharacterBehaviourAndMannersTextInput"
         android:layout_width="match_parent"
-        android:layout_height="87dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
         android:ems="10"
         android:gravity="start|top"
         android:lines="3"
@@ -73,7 +75,8 @@
     <EditText
         android:id="@+id/newCharacterCharacterTraitsTextInput"
         android:layout_width="match_parent"
-        android:layout_height="87dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
         android:ems="10"
         android:gravity="start|top"
         android:lines="3"
@@ -93,7 +96,8 @@
     <EditText
         android:id="@+id/newCharacterCharacterFlawsTextInput"
         android:layout_width="match_parent"
-        android:layout_height="87dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
         android:ems="10"
         android:gravity="start|top"
         android:lines="3"
@@ -113,7 +117,8 @@
     <EditText
         android:id="@+id/newCharacterQuirksTextInput"
         android:layout_width="match_parent"
-        android:layout_height="87dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
         android:ems="10"
         android:gravity="start|top"
         android:lines="3"
@@ -133,7 +138,8 @@
     <EditText
         android:id="@+id/newCharacterHobbiesTextInput"
         android:layout_width="match_parent"
-        android:layout_height="87dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
         android:ems="10"
         android:gravity="start|top"
         android:lines="3"
@@ -153,7 +159,8 @@
     <EditText
         android:id="@+id/newCharacterStrengthsAndWeaknessesTextInput"
         android:layout_width="match_parent"
-        android:layout_height="87dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
         android:ems="10"
         android:gravity="start|top"
         android:lines="3"
@@ -173,7 +180,8 @@
     <EditText
         android:id="@+id/newCharacterWantsAndDesiresTextInput"
         android:layout_width="match_parent"
-        android:layout_height="87dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
         android:ems="10"
         android:gravity="start|top"
         android:lines="3"
@@ -193,7 +201,8 @@
     <EditText
         android:id="@+id/newCharacterFearsAndInsecuritiesTextInput"
         android:layout_width="match_parent"
-        android:layout_height="87dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
         android:ems="10"
         android:gravity="start|top"
         android:lines="3"
@@ -213,7 +222,8 @@
     <EditText
         android:id="@+id/newCharacterSecretsTextInput"
         android:layout_width="match_parent"
-        android:layout_height="87dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
         android:ems="10"
         android:gravity="start|top"
         android:lines="3"

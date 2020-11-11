@@ -7,6 +7,6 @@
     <color name="purpleBackgroundColour">#512A70</color>
     <color name="purpleTextColour">#EBEBEB</color>
     <color name="purpleButtonColour">#050505</color>
-    <color name="purpleTextFieldColour">#221F3B</color>
+    <color name="purpleTextFieldColour">#99221F3B</color>
     <color name="purpleOverlayColour">#3B234F</color>
 </resources>

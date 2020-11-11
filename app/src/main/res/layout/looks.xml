@@ -35,7 +35,8 @@
     <EditText
         android:id="@+id/newCharacterEyesTextInput"
         android:layout_width="match_parent"
-        android:layout_height="87dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
         android:ems="10"
         android:gravity="start|top"
         android:lines="3"
@@ -55,7 +56,8 @@
     <EditText
         android:id="@+id/newCharacterSkinTextInput"
         android:layout_width="match_parent"
-        android:layout_height="87dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
         android:ems="10"
         android:gravity="start|top"
         android:lines="3"
@@ -75,7 +77,8 @@
     <EditText
         android:id="@+id/newCharacterHairTextInput"
         android:layout_width="match_parent"
-        android:layout_height="87dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
         android:ems="10"
         android:gravity="start|top"
         android:lines="3"
@@ -95,7 +98,8 @@
     <EditText
         android:id="@+id/newCharacterScentTextInput"
         android:layout_width="match_parent"
-        android:layout_height="87dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
         android:ems="10"
         android:gravity="start|top"
         android:lines="3"
@@ -115,7 +119,8 @@
     <EditText
         android:id="@+id/newCharacterVoiceTextInput"
         android:layout_width="match_parent"
-        android:layout_height="87dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
         android:ems="10"
         android:gravity="start|top"
         android:lines="3"
@@ -135,7 +140,8 @@
     <EditText
         android:id="@+id/newCharacterCharacteristicFeaturesTextInput"
         android:layout_width="match_parent"
-        android:layout_height="87dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
         android:ems="10"
         android:gravity="start|top"
         android:lines="3"
