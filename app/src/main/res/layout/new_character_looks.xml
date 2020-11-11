@@ -17,7 +17,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hyphenationFrequency="none"
-        android:paddingBottom="8dp"
         android:text="@string/looks"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -28,6 +27,7 @@
         android:id="@+id/newCharacterEyes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="4dp"
         android:text="@string/eyes"
         android:textColor="@color/purpleTextColour"
         android:textSize="18sp" />
@@ -49,6 +49,8 @@
         android:id="@+id/newCharacterSkin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
         android:text="@string/skin"
         android:textColor="@color/purpleTextColour"
         android:textSize="18sp" />
@@ -70,6 +72,8 @@
         android:id="@+id/newCharacterHair"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
         android:text="@string/hair"
         android:textColor="@color/purpleTextColour"
         android:textSize="18sp" />
@@ -91,6 +95,8 @@
         android:id="@+id/newCharacterScent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
         android:text="@string/scent"
         android:textColor="@color/purpleTextColour"
         android:textSize="18sp" />
@@ -112,6 +118,8 @@
         android:id="@+id/newCharacterVoice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
         android:text="@string/voice"
         android:textColor="@color/purpleTextColour"
         android:textSize="18sp" />
@@ -133,6 +141,8 @@
         android:id="@+id/newCharacterCharacteristicFeatures"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
         android:text="@string/characteristicFeatures"
         android:textColor="@color/purpleTextColour"
         android:textSize="18sp" />

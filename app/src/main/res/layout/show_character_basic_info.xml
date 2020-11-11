@@ -11,223 +11,291 @@
     tools:showIn="@layout/new_character">
 
     <TextView
-        android:id="@+id/newCharacterPersonalityTraits"
+        android:id="@+id/newCharacterBasicInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hyphenationFrequency="none"
-        android:paddingBottom="8dp"
-        android:text="@string/personalityTraits"
+        android:text="@string/basic"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/purpleTextColour"
         android:textSize="18sp" />
-
     <TextView
-        android:id="@+id/newCharacterPersonality"
+        android:id="@+id/newCharacterCharName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/personality"
+        android:paddingBottom="4dp"
+        android:hyphenationFrequency="none"
+        android:text="@string/name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/purpleTextColour"
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/newCharacterPersonalityTextInput"
+        android:id="@+id/newCharacterCharNameTextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/nameSuggestion"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:textColor="@color/purpleTextColour"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/newCharacterKenningText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        android:text="@string/titleKenningMoniker"
+        android:textColor="@color/purpleTextColour"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/newCharacterKenningsTextInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purpleTextFieldColour"
         android:ems="10"
         android:gravity="start|top"
         android:lines="3"
-        android:hint="@string/personalitySuggestion"
+        android:hint="@string/titleKenningMonikerSuggestion"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:textColor="@color/purpleTextColour"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/newCharacterRace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        android:text="@string/race"
+        android:textColor="@color/purpleTextColour"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/newCharacterRaceTextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
+        android:ems="10"
+        android:lines="3"
+        android:gravity="start|top"
+        android:hint="@string/raceSuggestion"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:textColor="@color/purpleTextColour"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/newCharacterGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        android:text="@string/gender"
+        android:textColor="@color/purpleTextColour"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/newCharacterGenderTextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleTextFieldColour"
+        android:ems="10"
+        android:lines="3"
+        android:gravity="start|top"
+        android:hint="@string/genderSuggestion"
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
         android:textColor="@color/purpleTextColour" />
 
     <TextView
-        android:id="@+id/newCharacterBehaviourAndManners"
+        android:id="@+id/newCharacterAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/behaviourAndManners"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        android:text="@string/age"
         android:textColor="@color/purpleTextColour"
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/newCharacterBehaviourAndMannersTextInput"
+        android:id="@+id/newCharacterAgeTextInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purpleTextFieldColour"
         android:ems="10"
-        android:gravity="start|top"
         android:lines="3"
-        android:hint="@string/behaviourAndMannersSuggestion"
+        android:gravity="start|top"
+        android:hint="@string/ageSuggestion"
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
         android:textColor="@color/purpleTextColour" />
 
     <TextView
-        android:id="@+id/newCharacterCharacterTraits"
+        android:id="@+id/newCharacterNationality"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/characterTraits"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        android:text="@string/nationality"
         android:textColor="@color/purpleTextColour"
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/newCharacterCharacterTraitsTextInput"
+        android:id="@+id/newCharacterNationalityTextInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purpleTextFieldColour"
         android:ems="10"
-        android:gravity="start|top"
         android:lines="3"
-        android:hint="@string/characterTraitsSuggestions"
+        android:gravity="start|top"
+        android:hint="@string/nationalitySuggestion"
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
         android:textColor="@color/purpleTextColour" />
 
     <TextView
-        android:id="@+id/newCharacterCharacterFlaws"
+        android:id="@+id/newCharacterHometown"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/characterFlaws"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        android:text="@string/hometown"
         android:textColor="@color/purpleTextColour"
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/newCharacterCharacterFlawsTextInput"
+        android:id="@+id/newCharacterHometownTextInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purpleTextFieldColour"
         android:ems="10"
-        android:gravity="start|top"
         android:lines="3"
-        android:hint="@string/characterFlawsSuggestions"
+        android:gravity="start|top"
+        android:hint="@string/hometownSuggestion"
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
         android:textColor="@color/purpleTextColour" />
 
     <TextView
-        android:id="@+id/newCharacterQuirks"
+        android:id="@+id/newCharacterContinent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/quirks"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        android:text="@string/continent"
         android:textColor="@color/purpleTextColour"
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/newCharacterQuirksTextInput"
+        android:id="@+id/newCharacterContinentTextInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purpleTextFieldColour"
         android:ems="10"
-        android:gravity="start|top"
         android:lines="3"
-        android:hint="@string/quirksSuggestion"
+        android:gravity="start|top"
+        android:hint="@string/continentSuggestion"
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
         android:textColor="@color/purpleTextColour" />
 
     <TextView
-        android:id="@+id/newCharacterHobbies"
+        android:id="@+id/newCharacterClass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hobbies"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        android:text="@string/rpClass"
         android:textColor="@color/purpleTextColour"
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/newCharacterHobbiesTextInput"
+        android:id="@+id/newCharacterClassTextInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purpleTextFieldColour"
         android:ems="10"
-        android:gravity="start|top"
         android:lines="3"
-        android:hint="@string/hobbiesSuggestions"
+        android:gravity="start|top"
+        android:hint="@string/rpClassSuggestion"
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
         android:textColor="@color/purpleTextColour" />
 
     <TextView
-        android:id="@+id/newCharacterStrengthsAndWeaknesses"
+        android:id="@+id/newCharacterSexuality"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/strengthsAndWeaknesses"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        android:text="@string/sexuality"
         android:textColor="@color/purpleTextColour"
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/newCharacterStrengthsAndWeaknessesTextInput"
+        android:id="@+id/newCharacterSexualityTextInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purpleTextFieldColour"
         android:ems="10"
-        android:gravity="start|top"
         android:lines="3"
-        android:hint="@string/strengthsAndWeaknessesSuggestions"
+        android:gravity="start|top"
+        android:hint="@string/sexualitySuggestion"
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
         android:textColor="@color/purpleTextColour" />
 
     <TextView
-        android:id="@+id/newCharacterWantsAndDesires"
+        android:id="@+id/newCharacterOccupation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/wantsAndDesires"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        android:text="@string/occupation"
         android:textColor="@color/purpleTextColour"
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/newCharacterWantsAndDesiresTextInput"
+        android:id="@+id/newCharacterOccupationTextInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purpleTextFieldColour"
         android:ems="10"
-        android:gravity="start|top"
         android:lines="3"
-        android:hint="@string/wantsAndDesiresSuggestions"
+        android:gravity="start|top"
+        android:hint="@string/occupationSuggestion"
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
         android:textColor="@color/purpleTextColour" />
 
     <TextView
-        android:id="@+id/newCharacterFearsAndInsecurities"
+        android:id="@+id/newCharacterReligion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/fearsAndInsecurities"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        android:text="@string/religion"
         android:textColor="@color/purpleTextColour"
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/newCharacterFearsAndInsecuritiesTextInput"
+        android:id="@+id/newCharacterReligionTextInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purpleTextFieldColour"
         android:ems="10"
-        android:gravity="start|top"
         android:lines="3"
-        android:hint="@string/fearsAndInsecuritiesSuggestions"
-        android:importantForAutofill="no"
-        android:inputType="textMultiLine"
-        android:textColor="@color/purpleTextColour" />
-
-    <TextView
-        android:id="@+id/newCharacterSecrets"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/secrets"
-        android:textColor="@color/purpleTextColour"
-        android:textSize="18sp" />
-
-    <EditText
-        android:id="@+id/newCharacterSecretsTextInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/purpleTextFieldColour"
-        android:ems="10"
         android:gravity="start|top"
-        android:lines="3"
-        android:hint="@string/secretsSuggestion"
+        android:hint="@string/religionSuggestion"
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
         android:textColor="@color/purpleTextColour" />
