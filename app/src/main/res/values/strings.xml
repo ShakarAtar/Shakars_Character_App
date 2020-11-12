@@ -30,29 +30,29 @@
     //Descriptors
     <string name="basic">Basic Info</string>
     <string name="name">Name</string>
-    <string name="nameSuggestion">NameSuggestion</string>
-    <string name="titleKenningMoniker">Title, Epithet or Nickname</string>
+    <string name="nameSuggestion">Ishtar, Eric, James, Xarexes, Victoria</string>
+    <string name="titleKenningMoniker">Title, Kenning, Moniker</string>
     <string name="titleKenningMonikerSuggestion">Title, Epithet or Nickname Suggestion</string>
     <string name="race">Race</string>
-    <string name="raceSuggestion">RaceSuggestion</string>
+    <string name="raceSuggestion">Human, Elf, Cyborg, Werewolf, Serpentfolk</string>
     <string name="gender">Gender</string>
-    <string name="genderSuggestion">GenderSuggestion</string>
+    <string name="genderSuggestion">Male, Female, Genderless, Apache Attack Helicopter</string>
     <string name="age">Age</string>
     <string name="ageSuggestion">16,396,4590</string>
     <string name="nationality">Nationality</string>
-    <string name="nationalitySuggestion">NationalitySuggestion</string>
+    <string name="nationalitySuggestion">Sindarin, Nurubian, British, Evalian, Asgaardian</string>
     <string name="hometown">Hometown</string>
-    <string name="hometownSuggestion">HometownSuggestion</string>
+    <string name="hometownSuggestion">New York, Ravenport, Gotham, Orion Prime X-2, Gondor</string>
     <string name="continent">Continent</string>
-    <string name="continentSuggestion">ContinentSuggestion</string>
+    <string name="continentSuggestion">Shanay Karren, Europe, Jartareth, Asia</string>
     <string name="rpClass">Class</string>
-    <string name="rpClassSuggestion">ClassSuggestion</string>
+    <string name="rpClassSuggestion">Hunter, Figther, Operative, Sniper, Warlock</string>
     <string name="sexuality">Sexuality</string>
     <string name="sexualitySuggestion">Straight, Bi, Gay, Asexual, Pansexual</string>
     <string name="occupation">Occupation</string>
-    <string name="occupationSuggestion">OccupationSuggestion</string>
+    <string name="occupationSuggestion">Spymaster, Assassin, Baker, Queen, Spaceship Pilot</string>
     <string name="religion">Religion</string>
-    <string name="religionSuggestion">ReligionSuggestion</string>
+    <string name="religionSuggestion">Calistria, Shamanism, The God Emperor, Christian, Asmodeus</string>
     <string name="looks">Looks</string>
     <string name="eyes">Eyes</string>
     <string name="eyesSuggestion">Green, Magenta, Almond Shaped, Cat\'s Pupil, Multiple Eyes Like a Spider, Completely White</string>
@@ -61,9 +61,9 @@
     <string name="hair">Hair</string>
     <string name="hairSuggestion">Blond, Red, Green, Short, Long, Wavy, Spiky, Braided, Mohawk</string>
     <string name="scent">Scent</string>
-    <string name="scentSuggestion">ScentSuggestion</string>
+    <string name="scentSuggestion">Oranges and Vanilla, Musky, Decaying, Manly, Roses, Gun Oil</string>
     <string name="voice">Voice</string>
-    <string name="voiceSuggestion">VoiceSuggestion</string>
+    <string name="voiceSuggestion">Sensual, Calm and Deep, Scratchy, Old, Jamaican Accent</string>
     <string name="characteristicFeatures">Characteristic Features</string>
     <string name="characteristicFeaturesSuggestions">Tattoos, Scars, Birthmarks</string>
     <string name="personalityTraits">Personality Traits</string>
@@ -115,6 +115,7 @@
     <string name="motivationsSuggestions">MotivationsSuggestions</string>
     <string name="overlay_button">Overlay Button</string>
     <string name="charactername">characterName</string>
+    <string name="titleKenningMoniker">Title, Kenning, Moniker</string>
 
 
 </resources>
