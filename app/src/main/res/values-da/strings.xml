@@ -56,7 +56,7 @@
     <string name="personality">Personlighed</string>
     <string name="personalitySuggestion">Kreativ Forsker, Leder, Blid Sjæl, Mægler, Overleverer</string>
     <string name="behaviourAndManners">Opførsel og Manere</string>
-    <string name="behaviourAndMannersSuggestion">Opførsel og Manere forslag</string>
+    <string name="behaviourAndMannersSuggestion">Åbner Altid Døren For Damer, Det Giver Et Sæt I Dem Når Nogen Laver En Pludselig Bevægelse, Undersøger Altid Et Rum For At Vide Hvor Udgangene Er</string>
     <string name="characterTraits">Karaktertræk</string>
     <string name="characterTraitsSuggestions">Omsorgsfuld, Glad, Modig, Ond, Beskyttende, Sadistisk, From</string>
     <string name="characterFlaws">Karakterfejl</string>
@@ -107,5 +107,5 @@
     <string name="newNPC">Ny NPC</string>
     <string name="voice">Stemme</string>
     <string name="voiceSuggestion">Sensuel, Rolig og Dyb, Kradset, Gammel, Jamaicansk accent</string>
-    <string name="titleKenningMonikerSuggestion">Hertug, Den Stærke, Højpræstinden, Bastard Prinsen, Forføresken</string>
+    <string name="titleKenningMonikerSuggestion">Hertug, Den Stærke, Høj Præstinde, Bastard Prinsen, Forførersken</string>
 </resources>

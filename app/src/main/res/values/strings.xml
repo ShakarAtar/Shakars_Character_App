@@ -32,7 +32,7 @@
     <string name="name">Name</string>
     <string name="nameSuggestion">Ishtar, Eric, James, Xarexes, Victoria</string>
     <string name="titleKenningMoniker">Title, Kenning, Moniker</string>
-    <string name="titleKenningMonikerSuggestion">Title, Epithet or Nickname Suggestion</string>
+    <string name="titleKenningMonikerSuggestion">Duke, The Strong, High Priestess, The Bastard Prince, The Seducer</string>
     <string name="race">Race</string>
     <string name="raceSuggestion">Human, Elf, Cyborg, Werewolf, Serpentfolk</string>
     <string name="gender">Gender</string>
@@ -70,7 +70,7 @@
     <string name="personality">Personality</string>
     <string name="personalitySuggestion">Creative Scientist, Leader, Gentle Soul, Mediator, Survivor</string>
     <string name="behaviourAndManners">Behaviour and Manners</string>
-    <string name="behaviourAndMannersSuggestion">Behaviour and MannersSuggestions</string>
+    <string name="behaviourAndMannersSuggestion">Always Opens The Door For Ladies, Flinches When Someone Makes A Sudden Movement, Always Surveys A Room To Know Where The Exits Are</string>
     <string name="characterTraits">Character Traits</string>
     <string name="characterTraitsSuggestions">Caring, Happy, Courageous, Evil, Protective, Sadistic, Pious</string>
     <string name="characterFlaws">Character Flaws</string>
@@ -115,7 +115,5 @@
     <string name="motivationsSuggestions">Is Obsessed With One of the PCs, Has Ulterior Motives, Wants The Party to Succeed, Needs The Party To Retrieve an Object</string>
     <string name="overlay_button">Overlay Button</string>
     <string name="charactername">characterName</string>
-    <string name="titleKenningMoniker">Title, Kenning, Moniker</string>
-
 
 </resources>
