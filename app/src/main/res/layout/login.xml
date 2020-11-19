@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/appTitle"
+        android:id="@+id/loginAppTitle"
         android:layout_width="151dp"
         android:layout_height="171dp"
         android:fontFamily="sans-serif-medium"
@@ -17,7 +17,7 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="@color/purpleTextColour"
+        android:textColor="@color/greenTextColour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -30,16 +30,16 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:autofillHints=""
-        android:background="#99221F3B"
+        android:background="@color/purpleOverlayColour"
         android:hint="@string/username"
         android:inputType="text"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/purpleTextColour"
-        android:textColorHint="@color/purpleTextColour"
+        android:textColor="@color/greenTextColour"
+        android:textColorHint="@color/greenTextColour"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPageUserNameText" />
+        app:layout_constraintTop_toBottomOf="@+id/loginPageUsernameText" />
 
     <TextView
         android:id="@+id/loginForgotPasswordClickable"
@@ -61,12 +61,12 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:autofillHints=""
-        android:background="#99221F3B"
+        android:background="@color/purpleOverlayColour"
         android:hint="@string/password"
         android:inputType="textPassword"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/purpleTextColour"
-        android:textColorHint="@color/purpleTextColour"
+        android:textColor="@color/greenTextColour"
+        android:textColorHint="@color/greenTextColour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.53"
@@ -75,19 +75,19 @@
         app:layout_constraintVertical_bias="0.016" />
 
     <TextView
-        android:id="@+id/loginPageUserNameText"
+        android:id="@+id/loginPageUsernameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="108dp"
         android:fontFamily="sans-serif-light"
         android:text="@string/username"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textColor="@color/purpleTextColour"
+        android:textColor="@color/greenTextColour"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.35"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/loginAppTitle" />
 
     <TextView
         android:id="@+id/loginPasswordText"
@@ -96,7 +96,7 @@
         android:fontFamily="sans-serif-light"
         android:text="@string/password"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="@color/purpleTextColour"
+        android:textColor="@color/greenTextColour"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,7 +113,7 @@
         android:fontFamily="sans-serif-medium"
         android:text="@string/login"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/purpleTextColour"
+        android:textColor="@color/greenTextColour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -121,14 +121,14 @@
         app:layout_constraintVertical_bias="0.3" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/loginCreateUser"
         android:layout_width="156dp"
         android:layout_height="25dp"
         android:layout_marginBottom="32dp"
-        android:background="#99221F3B"
+        android:background="@color/purpleOverlayColour"
         android:text="@string/createUser"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/purpleTextColour"
+        android:textColor="@color/greenTextColour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

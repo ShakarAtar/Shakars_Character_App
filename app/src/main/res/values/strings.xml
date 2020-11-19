@@ -1,4 +1,10 @@
 <resources>
+    //Theme
+    <string name="preferenceFile" translatable="false">PreferenceFile</string>
+    <string name="currentTheme" translatable="false">baseTheme</string>
+    <string name="greenTheme" translatable="false">greenTheme</string>
+    <string name="purpleTheme" translatable="false">purpleTheme</string>
+
     <string name="app_name">Shakars_Character_App</string>
     //Text all over the app
     <string name="appTitle">Shakar\'s Character App</string>
