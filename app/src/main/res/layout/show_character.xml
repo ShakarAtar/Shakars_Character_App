@@ -51,14 +51,6 @@
 
             <include layout="@layout/new_character_basic_info" />
 
-            <include layout="@layout/new_character_looks" />
-
-            <include layout="@layout/new_character_personality_traits" />
-
-            <include layout="@layout/new_character_relations" />
-
-            <include layout="@layout/new_character_goals_and_background" />
-
         </LinearLayout>
     </ScrollView>
 

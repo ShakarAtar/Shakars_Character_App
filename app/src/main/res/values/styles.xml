@@ -14,11 +14,11 @@
     </style>
 
     <style name="greenTheme" parent="Theme.AppCompat.DayNight">
-        <item name="background">@color/purpleBackgroundColour</item>
-        <item name="textColour">@color/purpleTextColour</item>
-        <item name="buttonColour">@color/purpleButtonColour</item>
-        <item name="textFieldColour">@color/purpleTextFieldColour</item>
-        <item name="overlayColour">@color/purpleOverlayColour</item>
+        <item name="background">@color/greenBackgroundColour</item>
+        <item name="textColour">@color/greenTextColour</item>
+        <item name="buttonColour">@color/greenButtonColour</item>
+        <item name="textFieldColour">@color/greenTextFieldColour</item>
+        <item name="overlayColour">@color/greenOverlayColour</item>
 
     </style>
 
