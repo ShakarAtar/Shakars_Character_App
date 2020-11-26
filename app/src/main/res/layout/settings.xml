@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.001"
-        app:srcCompat="@android:drawable/btn_dropdown" />
+        app:srcCompat="@drawable/settings" />
 
     <TextView
         android:id="@+id/settingsTitle"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:text="@string/settings"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/purpleTextColour"
+        android:textColor="?attr/textColour"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +56,7 @@
         android:layout_width="181dp"
         android:layout_height="24dp"
         android:layout_marginBottom="316dp"
-        android:background="#99221F3B"
+        android:background="@color/purpleTextFieldColour"
         android:spinnerMode="dropdown"
         android:textColor="@color/purpleTextColour"
         android:textSize="20sp"
