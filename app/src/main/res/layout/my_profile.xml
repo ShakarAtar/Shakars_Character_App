@@ -5,33 +5,27 @@
     android:id="@+id/myProfileBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purpleBackgroundColour">
+    android:background="?attr/background">
 
-    <EditText
-        android:id="@+id/myProfileUsernameEditText2"
-        android:layout_width="200dp"
+    <TextView
+        android:id="@+id/myProfileTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:autofillHints=""
-        android:background="#99221F3B"
-        android:inputType="text"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/purpleTextColour"
-        android:textColorHint="@color/purpleTextColour"
-        android:textSize="20sp"
+        android:text="@string/myProfile"
+        android:textColor="?attr/textColour"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myPRfolePasswordText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.12" />
 
     <TextView
         android:id="@+id/myProfileUsernameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/username"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/purpleTextColour"
+        android:textColor="?attr/textColour"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,13 +34,44 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.269" />
 
+    <EditText
+        android:id="@+id/myProfileUsernameEditText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:background="?attr/overlayColour"
+        android:inputType="text"
+        android:textColor="?attr/textColour"
+        android:textColorHint="?attr/textColour"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myProfileUsernameText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/myProfileEditUsername"
+        android:layout_width="54dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="1dp"
+        android:background="?attr/buttonColour"
+        android:text="@string/edit"
+        android:textColor="?attr/textColour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toEndOf="@+id/myProfileUsernameEditText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.308" />
+
     <TextView
-        android:id="@+id/myPRfolePasswordText"
+        android:id="@+id/myProfilePasswordText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/password"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/purpleTextColour"
+        android:textColor="?attr/textColour"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,79 +81,48 @@
         app:layout_constraintVertical_bias="0.19" />
 
     <EditText
-        android:id="@+id/myProfileUsernameEditText"
+        android:id="@+id/myProfilePasswordEditText"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:autofillHints=""
-        android:background="#99221F3B"
-        android:inputType="text"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/purpleTextColour"
-        android:textColorHint="@color/purpleTextColour"
+        android:background="?attr/overlayColour"
+        android:inputType="textPassword"
+        android:textColor="?attr/textColour"
+        android:textColorHint="?attr/textColour"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myProfileUsernameText"
+        app:layout_constraintTop_toBottomOf="@+id/myProfilePasswordText"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/myProfileEditPassword"
+        android:layout_width="53dp"
+        android:layout_height="28dp"
+        android:background="?attr/buttonColour"
+        android:text="@string/edit"
+        android:textColor="?attr/textColour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.318"
+        app:layout_constraintStart_toEndOf="@+id/myProfilePasswordEditText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.477" />
 
     <ImageButton
         android:id="@+id/myProfileOverlayButton"
-        android:layout_width="51dp"
-        android:layout_height="42dp"
-        android:background="@color/purpleBackgroundColour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/background"
         android:contentDescription="@string/overlay_button"
-        android:tint="#993B234F"
+        android:tint="?attr/textFieldColour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.001"
-        app:srcCompat="@android:drawable/btn_dropdown" />
-
-    <Button
-        android:id="@+id/myProfileEditUser"
-        android:layout_width="54dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="1dp"
-        android:background="@color/purpleButtonColour"
-        android:text="@string/edit"
-        android:textColor="@color/purpleTextColour"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.285"
-        app:layout_constraintStart_toEndOf="@+id/myProfileUsernameEditText"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308" />
-
-    <Button
-        android:id="@+id/myProfileEditPassword"
-        android:layout_width="53dp"
-        android:layout_height="28dp"
-        android:background="@color/purpleButtonColour"
-        android:text="@string/edit"
-        android:textColor="@color/purpleTextColour"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.318"
-        app:layout_constraintStart_toEndOf="@+id/myProfileUsernameEditText2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.477" />
-
-    <TextView
-        android:id="@+id/myProfileTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/myProfile"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/purpleTextColour"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12" />
+        app:srcCompat="@drawable/settings"  />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
