@@ -21,7 +21,7 @@
         android:textColor="@color/purpleTextColour"
         android:textSize="18sp" />
     <TextView
-        android:id="@+id/newCharacterCharName"
+        android:id="@+id/newCharacterTVTitles"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="4dp"
@@ -32,7 +32,7 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/newCharacterCharNameTextInput"
+        android:id="@+id/newCharacterHints"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purpleTextFieldColour"
