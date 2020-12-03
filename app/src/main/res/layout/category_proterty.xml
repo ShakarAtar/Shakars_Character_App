@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    tools:layout_editor_absoluteX="1dp"
+    tools:showIn="@layout/new_character">
+
+    <TextView
+        android:id="@+id/newCharacterTVTitles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dp"
+        android:hyphenationFrequency="none"
+        android:textColor="?attr/textColour"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/newCharacterHints"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/overlayColour"
+        android:ems="10"
+        android:gravity="start|top"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:textColor="?attr/textColour"
+        android:textSize="18sp" />
+
+</LinearLayout>
