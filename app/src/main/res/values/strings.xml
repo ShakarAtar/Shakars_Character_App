@@ -34,7 +34,8 @@
     <string name="createNewNPC">Create New NPC</string>
     <string name="newNPC">New NPC</string>
     //Descriptors
-    <string name="basic">Basic Info</string>
+    //Basic Info
+    <string name="basic">Basic Info</string> //Catagory
     <string name="name">Name</string>
     <string name="nameSuggestion">Ishtar, Eric, James, Xarexes, Victoria</string>
     <string name="titleKenningMoniker">Title, Kenning, Moniker</string>
@@ -59,7 +60,8 @@
     <string name="occupationSuggestion">Spymaster, Assassin, Baker, Queen, Spaceship Pilot</string>
     <string name="religion">Religion</string>
     <string name="religionSuggestion">Calistria, Shamanism, The God Emperor, Christian, Asmodeus</string>
-    <string name="looks">Looks</string>
+    //Looks
+    <string name="looks">Looks</string> //Catagory
     <string name="eyes">Eyes</string>
     <string name="eyesSuggestion">Green, Magenta, Almond Shaped, Cat\'s Pupil, Multiple Eyes Like a Spider, Completely White</string>
     <string name="skin">Skin</string>
@@ -72,7 +74,8 @@
     <string name="voiceSuggestion">Sensual, Calm and Deep, Scratchy, Old, Jamaican Accent</string>
     <string name="characteristicFeatures">Characteristic Features</string>
     <string name="characteristicFeaturesSuggestions">Tattoos, Scars, Birthmarks, Horns, Hoofed Feet, Gills</string>
-    <string name="personalityTraits">Personality Traits</string>
+    //Personality Traits
+    <string name="personalityTraits">Personality Traits</string> //Catagory
     <string name="personality">Personality</string>
     <string name="personalitySuggestion">Creative Scientist, Leader, Gentle Soul, Mediator, Survivor</string>
     <string name="behaviourAndManners">Behaviour and Manners</string>
@@ -93,7 +96,8 @@
     <string name="fearsAndInsecuritiesSuggestions">SPIDERS, Not Feeling Worthy of Love, Losing Someone Close, Thinking They are Not Good Enough, Dying</string>
     <string name="secrets">Secrets</string>
     <string name="secretsSuggestion">Is the Child of The Bad Guy, Is a Undercover Spy, Is a Vampire, Steals From The Party, Sold His Soul to A Demon</string>
-    <string name="relations">Relations</string>
+    //Relations
+    <string name="relations">Relations</string> //Catagory
     <string name="family">Family</string>
     <string name="familySuggestions">Mother, Father, Siblings, Uncles, Cousins, Evil Twins</string>
     <string name="alliesAndContacts">Allies and Contacts</string>
@@ -102,13 +106,14 @@
     <string name="enemiesSuggestions">Avengers, The Mob, Vampire Clan, The Duke, Your Sister, That One Bard in the Tavern</string>
     <string name="affiliatedGroups">Affiliated Groups</string>
     <string name="affiliatedGroupsSuggestions">Hydra, The Thieve\'s Guild, The Paladin Order, Children of The Moon, The Wanderers Of The Unbeaten Path</string>
-    <string name="goalsAndBG">Goals and Background</string>
+    // Goals and Background
+    <string name="goalsAndBG">Goals and Background</string> //Catagory
     <string name="currentGoals">Current Goals</string>
     <string name="currentGoalsSuggestions">Bed the Hot Tavern Wench, Save the Princess, Avenge your Father\'s Death</string>
     <string name="backgroundStory">Background Story</string>
     <string name="backgroundStorySuggestions">It Can Range From: Orc Killed my Family to I Am the Thirtheenth Son of The Thirtheenth Son and I am Destined to Eradicate All Evil, Or it Can Be Simply I Still Have My Parents and I Really Just Want to Adventure</string>
     //Descriptors for NPCs only
-    <string name="npcDescriptions">Descriptors for NPCs only</string>
+    <string name="npcDescriptions">Descriptors for NPCs only</string> //Catagory
     <string name="specialAbilities">Special Abilities</string>
     <string name="specialAbilitiesSuggestions">Death Lasers Eyes, Charm Anything, Super Speed, Sneaky as Fuck</string>
     <string name="partOfWorld">How Are They Part of The World?</string>

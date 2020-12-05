@@ -11,25 +11,10 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
 
 public class NewCharacter extends AppCompatActivity implements View.OnClickListener {
     Button save;
     TextView title;
-
-    static class CategoriesAndProperties {
-        int[] categories = {R.string.basic, R.string.looks};
-
-        int[][] properties = {
-                {R.string.name, R.string.titleKenningMoniker, R.string.race, R.string.gender, R.string.age, R.string.nationality, R.string.hometown, R.string.continent, R.string.rpClass, R.string.sexuality, R.string.occupation, R.string.religion},
-                {R.string.name, R.string.titleKenningMoniker, R.string.race, R.string.gender, R.string.age, R.string.nationality, R.string.hometown, R.string.continent, R.string.rpClass, R.string.sexuality, R.string.occupation, R.string.religion},
-        };
-    }
-
-    static CategoriesAndProperties data = new CategoriesAndProperties();
-    static boolean[] foldetIn = new boolean[data.categories.length];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,28 +30,24 @@ public class NewCharacter extends AppCompatActivity implements View.OnClickListe
         ViewGroup content = findViewById(R.id.newCharacterLayout);
         content.removeAllViews();
 
-        for (int catIndex = 0; catIndex < data.categories.length; catIndex++) {
-            View catRroot = getLayoutInflater().inflate(R.layout.category_title, content, false);
-            LinearLayout cat_title_ll = catRroot.findViewById(R.id.cat_title_ll);
+        for (int catIndex = 0; catIndex < CatagoriesAndProperties.data.categoriesPC.length; catIndex++) {
+            View catRoot = getLayoutInflater().inflate(R.layout.category_title, content, false);
+            LinearLayout cat_title_ll = catRoot.findViewById(R.id.cat_title_ll);
             cat_title_ll.removeAllViews();
-            TextView catTitleTv = catRroot.findViewById(R.id.newCharacterBasicInfo);
-            catTitleTv.setText(data.categories[catIndex]);
+            TextView catTitleTv = catRoot.findViewById(R.id.newCharacterBasicInfo);
+            catTitleTv.setText(CatagoriesAndProperties.data.categoriesPC[catIndex]);
             catTitleTv.setOnClickListener(this);
             catTitleTv.setTag(catIndex);
-            //titleTV.setTag(propIndex);
-            //titlesTV.add(titleTV);
-            content.addView(catRroot);
+            content.addView(catRoot);
             categorieisLL.add(cat_title_ll);
-            cat_title_ll.setVisibility( foldetIn[catIndex] ? View.GONE : View.VISIBLE );
+            cat_title_ll.setVisibility(CatagoriesAndProperties.folded[catIndex] ? View.GONE : View.VISIBLE );
 
-            int[] props = data.properties[catIndex];
+            int[] props = CatagoriesAndProperties.data.propertiesPC[catIndex];
             for (int propIndex = 0; propIndex < props.length; propIndex++) {
 
                 View root = getLayoutInflater().inflate(R.layout.category_proterty, content, false);
                 TextView titleTV = root.findViewById(R.id.newCharacterTVTitles);
                 titleTV.setText(props[propIndex]);
-                //titleTV.setTag(propIndex);
-                //titlesTV.add(titleTV);
 
                 EditText hintTV = root.findViewById(R.id.newCharacterHints);
                 hintTV.setHint(hints[propIndex]);
@@ -83,11 +64,11 @@ public class NewCharacter extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick (View v){
         int catIndex = (int) v.getTag();
-        foldetIn[catIndex] = !foldetIn[catIndex];
+        CatagoriesAndProperties.folded[catIndex] = !CatagoriesAndProperties.folded[catIndex];
         //categorieisLL.get(catIndex).setVisibility( foldetIn[catIndex] ? View.GONE : View.VISIBLE );
 
         View cat = categorieisLL.get(catIndex);
-        if (foldetIn[catIndex]) {
+        if (CatagoriesAndProperties.folded[catIndex]) {
             cat.animate().scaleY(0);
 
         } else {
