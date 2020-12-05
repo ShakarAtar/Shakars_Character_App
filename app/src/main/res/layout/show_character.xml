@@ -49,7 +49,7 @@
             android:orientation="vertical">
 
 
-            <include layout="@layout/category_proterty" />
+            <include layout="@layout/category_property" />
 
         </LinearLayout>
     </ScrollView>
