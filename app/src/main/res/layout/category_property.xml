@@ -11,7 +11,7 @@
     tools:showIn="@layout/new_character">
 
     <TextView
-        android:id="@+id/newCharacterTVTitles"
+        android:id="@+id/newCharacterPropertiesTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="4dp"

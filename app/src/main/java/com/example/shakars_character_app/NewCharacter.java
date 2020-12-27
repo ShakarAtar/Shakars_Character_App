@@ -34,7 +34,7 @@ public class NewCharacter extends AppCompatActivity implements View.OnClickListe
             View catRoot = getLayoutInflater().inflate(R.layout.category_title, content, false);
             LinearLayout cat_title_ll = catRoot.findViewById(R.id.cat_title_ll);
             cat_title_ll.removeAllViews();
-            TextView catTitleTv = catRoot.findViewById(R.id.newCharacterBasicInfo);
+            TextView catTitleTv = catRoot.findViewById(R.id.newCharacterCategoriesTV);
             catTitleTv.setText(CatagoriesAndProperties.data.categoriesPC[catIndex]);
             catTitleTv.setOnClickListener(this);
             catTitleTv.setTag(catIndex);
@@ -46,7 +46,7 @@ public class NewCharacter extends AppCompatActivity implements View.OnClickListe
             int[] props = CatagoriesAndProperties.data.propertiesPC[catIndex];
             for (int propIndex = 0; propIndex < props.length; propIndex++) {
 
-                TextView titleTV = root.findViewById(R.id.newCharacterTVTitles);
+                TextView titleTV = root.findViewById(R.id.newCharacterPropertiesTV);
                 titleTV.setText(props[propIndex]);
 
 
