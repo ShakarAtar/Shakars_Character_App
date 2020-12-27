@@ -42,25 +42,30 @@ public class NewCharacter extends AppCompatActivity implements View.OnClickListe
             categorieisLL.add(cat_title_ll);
             cat_title_ll.setVisibility(CatagoriesAndProperties.folded[catIndex] ? View.GONE : View.VISIBLE);
 
-            View root = getLayoutInflater().inflate(R.layout.category_property, content, false);
             int[] props = CatagoriesAndProperties.data.propertiesPC[catIndex];
+            int[] hints = CatagoriesAndProperties.data.hintsPC[catIndex];
             for (int propIndex = 0; propIndex < props.length; propIndex++) {
 
+                View root = getLayoutInflater().inflate(R.layout.category_property, content, false);
                 TextView titleTV = root.findViewById(R.id.newCharacterPropertiesTV);
                 titleTV.setText(props[propIndex]);
 
-
-            }
-
-            int[] hints = CatagoriesAndProperties.data.hintsPC[catIndex];
-            for (int hintIndex = 0; hintIndex < hints.length; hintIndex++) {
+                int hintIndex = propIndex;
+                if (hintIndex>=hints.length) {
+                    System.err.println("Mangler hint for "+catIndex+", "+propIndex);
+                    hintIndex = 0;
+                }
                 EditText hintTV = root.findViewById(R.id.newCharacterHints);
                 hintTV.setHint(hints[hintIndex]);
                 hintTV.setTag(hintIndex);
+
+                cat_title_ll.addView(root);
+            }
+
+            for (int hintIndex = 0; hintIndex < hints.length; hintIndex++) {
 //                hintsTV.add(hintTV);
 
             }
-            cat_title_ll.addView(root);
         }
 
     }
