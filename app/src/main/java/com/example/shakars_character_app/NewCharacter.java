@@ -24,7 +24,7 @@ public class NewCharacter extends AppCompatActivity implements View.OnClickListe
         title = findViewById(R.id.newCharacterTitle);
 
         //Buttons
-        save = findViewById(R.id.newCharacterSaveButton);
+        save = findViewById(R.id.viewCharacterEditButton);
         save.setOnClickListener(this);
 
         ViewGroup content = findViewById(R.id.newCharacterLayout);
@@ -34,7 +34,7 @@ public class NewCharacter extends AppCompatActivity implements View.OnClickListe
             View catRoot = getLayoutInflater().inflate(R.layout.category_title, content, false);
             LinearLayout cat_title_ll = catRoot.findViewById(R.id.cat_title_ll);
             cat_title_ll.removeAllViews();
-            TextView catTitleTv = catRoot.findViewById(R.id.newCharacterCategoriesTV);
+            TextView catTitleTv = catRoot.findViewById(R.id.categoriesTV);
             catTitleTv.setText(CatagoriesAndProperties.data.categoriesPC[catIndex]);
             catTitleTv.setOnClickListener(this);
             catTitleTv.setTag(catIndex);
@@ -47,7 +47,7 @@ public class NewCharacter extends AppCompatActivity implements View.OnClickListe
             for (int propIndex = 0; propIndex < props.length; propIndex++) {
 
                 View root = getLayoutInflater().inflate(R.layout.category_property, content, false);
-                TextView titleTV = root.findViewById(R.id.newCharacterPropertiesTV);
+                TextView titleTV = root.findViewById(R.id.propertiesTV);
                 titleTV.setText(props[propIndex]);
 
                 int hintIndex = propIndex;
@@ -55,17 +55,13 @@ public class NewCharacter extends AppCompatActivity implements View.OnClickListe
                     System.err.println("Mangler hint for "+catIndex+", "+propIndex);
                     hintIndex = 0;
                 }
-                EditText hintTV = root.findViewById(R.id.newCharacterHints);
+                EditText hintTV = root.findViewById(R.id.hints);
                 hintTV.setHint(hints[hintIndex]);
                 hintTV.setTag(hintIndex);
 
                 cat_title_ll.addView(root);
             }
 
-            for (int hintIndex = 0; hintIndex < hints.length; hintIndex++) {
-//                hintsTV.add(hintTV);
-
-            }
         }
 
     }

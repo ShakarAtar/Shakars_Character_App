@@ -11,7 +11,7 @@
     tools:showIn="@layout/new_character">
 
     <TextView
-        android:id="@+id/propertiesTV"
+        android:id="@+id/viewPropertiesTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="4dp"
@@ -19,15 +19,13 @@
         android:textColor="?attr/textColour"
         android:textSize="18sp" />
 
-    <EditText
-        android:id="@+id/hints"
+    <TextView
+        android:id="@+id/viewHints"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/overlayColour"
         android:ems="10"
         android:gravity="start|top"
-        android:importantForAutofill="no"
-        android:inputType="textMultiLine"
         android:lines="3"
         android:textColor="?attr/textColour"
         android:textSize="18sp" />

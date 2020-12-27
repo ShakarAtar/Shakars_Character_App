@@ -108,4 +108,8 @@
     <string name="voice">Stemme</string>
     <string name="voiceSuggestion">Sensuel, Rolig og Dyb, Kradset, Gammel, Jamaicansk accent</string>
     <string name="titleKenningMonikerSuggestion">Hertug, Den Stærke, Høj Præstinde, Bastard Prinsen, Forførersken</string>
+    <string name="viewCharacter">Vis Character</string>
+    <string name="editCharacter">Rediger Character</string>
+    <string name="viewNPC">Vis NPC</string>
+    <string name="editNPC">Rediger NPC</string>
 </resources>

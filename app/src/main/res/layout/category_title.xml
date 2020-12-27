@@ -11,7 +11,7 @@
     tools:showIn="@layout/new_character">
 
     <TextView
-        android:id="@+id/newCharacterCategoriesTV"
+        android:id="@+id/categoriesTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hyphenationFrequency="none"

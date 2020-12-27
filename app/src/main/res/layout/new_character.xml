@@ -5,15 +5,15 @@
     android:id="@+id/newCharacterBG"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purpleBackgroundColour">
+    android:background="?attr/background">
 
     <Button
         android:id="@+id/newCharacterSaveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/purpleButtonColour"
+        android:backgroundTint="?attr/buttonColour"
         android:text="@string/save"
-        android:textColor="@color/purpleTextColour"
+        android:textColor="?attr/textColour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/newCharacter"
-        android:textColor="@color/purpleTextColour"
+        android:textColor="?attr/textColour"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,8 +49,6 @@
             android:orientation="vertical">
 
 
-            <include layout="@layout/category_title" />
-            <include layout="@layout/category_title" />
             <include layout="@layout/category_title" />
 
         </LinearLayout>

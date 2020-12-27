@@ -30,12 +30,16 @@
     //Characters
     <string name="createNewChar">Create New Character</string>
     <string name="newCharacter">New Character</string>
+    <string name="viewCharacter">View Character</string>
+    <string name="editCharacter">Edit Character</string>
     //NPCs
     <string name="createNewNPC">Create New NPC</string>
     <string name="newNPC">New NPC</string>
+    <string name="viewNPC">View NPC</string>
+    <string name="editNPC">Edit NPC</string>
     //Descriptors
     //Basic Info
-    <string name="basic">Basic Info</string> //Catagory
+    <string name="basic">Basic Info</string> //Category
     <string name="name">Name</string>
     <string name="nameSuggestion">Ishtar, Eric, James, Xarexes, Victoria</string>
     <string name="titleKenningMoniker">Title, Kenning, Moniker</string>

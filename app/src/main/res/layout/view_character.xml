@@ -2,18 +2,18 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/newCharacterBG"
+    android:id="@+id/viewCharacterBG"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purpleBackgroundColour">
+    android:background="?attr/background">
 
     <Button
-        android:id="@+id/newCharacterSaveButton"
+        android:id="@+id/viewCharacterEditButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/purpleButtonColour"
-        android:text="@string/save"
-        android:textColor="@color/purpleTextColour"
+        android:backgroundTint="?attr/buttonColour"
+        android:text="@string/edit"
+        android:textColor="?attr/textColour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -22,11 +22,11 @@
         app:layout_constraintVertical_bias="0.225" />
 
     <TextView
-        android:id="@+id/newCharacterTitle"
+        android:id="@+id/viewCharacterTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/newCharacter"
-        android:textColor="@color/purpleTextColour"
+        android:text="@string/viewCharacter"
+        android:textColor="?attr/textColour"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,17 +39,17 @@
         android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newCharacterSaveButton"
+        app:layout_constraintTop_toBottomOf="@+id/viewCharacterEditButton"
         tools:layout_editor_absoluteX="1dp">
 
         <LinearLayout
-            android:id="@+id/showCharacterLayout"
+            android:id="@+id/viewCharacterLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
 
-            <include layout="@layout/category_property" />
+            <include layout="@layout/category_title" />
 
         </LinearLayout>
     </ScrollView>
