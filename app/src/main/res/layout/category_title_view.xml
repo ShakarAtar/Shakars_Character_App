@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -8,7 +9,7 @@
     android:orientation="vertical"
     app:layout_constraintBottom_toBottomOf="parent"
     tools:layout_editor_absoluteX="1dp"
-    tools:showIn="@layout/new_character">
+    tools:showIn="@layout/view_character">
 
     <TextView
         android:id="@+id/viewCategoriesTV"
@@ -23,11 +24,11 @@
     <LinearLayout
         android:id="@+id/cat_title_ll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
 
-
-        <include layout="@layout/category_property" />
+        <include layout="@layout/category_property_view" />
 
     </LinearLayout>
 

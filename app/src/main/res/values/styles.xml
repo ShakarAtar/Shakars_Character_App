@@ -10,6 +10,7 @@
         <item name="buttonColour">@color/purpleButtonColour</item>
         <item name="textFieldColour">@color/purpleTextFieldColour</item>
         <item name="overlayColour">@color/purpleOverlayColour</item>
+        <item name="hintColour">@color/purpleHintColour</item>
 
     </style>
 
@@ -19,6 +20,7 @@
         <item name="buttonColour">@color/greenButtonColour</item>
         <item name="textFieldColour">@color/greenTextFieldColour</item>
         <item name="overlayColour">@color/greenOverlayColour</item>
+        <item name="hintColour">@color/greenHintColour</item>
 
     </style>
 

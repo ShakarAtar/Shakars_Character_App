@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -8,14 +8,14 @@
     android:orientation="vertical"
     app:layout_constraintBottom_toBottomOf="parent"
     tools:layout_editor_absoluteX="1dp"
-    tools:showIn="@layout/new_character">
+    tools:showIn="@layout/view_character">
 
     <TextView
         android:id="@+id/viewPropertiesTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="4dp"
         android:hyphenationFrequency="none"
+        android:paddingBottom="4dp"
         android:textColor="?attr/textColour"
         android:textSize="18sp" />
 
@@ -28,6 +28,7 @@
         android:gravity="start|top"
         android:lines="3"
         android:textColor="?attr/textColour"
+        android:textColorHint="?attr/hintColour"
         android:textSize="18sp" />
 
 </LinearLayout>

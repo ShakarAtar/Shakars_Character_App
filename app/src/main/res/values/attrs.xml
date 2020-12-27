@@ -5,6 +5,7 @@
     <attr name="buttonColour" format="reference"/>
     <attr name="textFieldColour" format="reference"/>
     <attr name="overlayColour" format="reference"/>
+    <attr name="hintColour" format="reference"/>
 
 
 

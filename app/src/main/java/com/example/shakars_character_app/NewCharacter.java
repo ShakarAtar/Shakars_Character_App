@@ -24,7 +24,7 @@ public class NewCharacter extends AppCompatActivity implements View.OnClickListe
         title = findViewById(R.id.newCharacterTitle);
 
         //Buttons
-        save = findViewById(R.id.viewCharacterEditButton);
+        save = findViewById(R.id.newCharacterSaveButton);
         save.setOnClickListener(this);
 
         ViewGroup content = findViewById(R.id.newCharacterLayout);

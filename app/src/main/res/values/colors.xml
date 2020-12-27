@@ -7,6 +7,8 @@
     <color name="purpleButtonColour">#050505</color>
     <color name="purpleTextFieldColour">#99221F3B</color>
     <color name="purpleOverlayColour">#3B234F</color>
+    <color name="purpleHintColour">#9C71BF</color>
+
 
     //Green Theme
     <color name="greenBackgroundColour">#398E01</color>
@@ -14,5 +16,6 @@
     <color name="greenButtonColour">#2C6301</color>
     <color name="greenTextFieldColour">#99193900</color>
     <color name="greenOverlayColour">#5BE200</color>
+    <color name="greenHintColour">#3B234F</color>
 
 </resources>
