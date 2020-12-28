@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class NewCharacter extends AppCompatActivity implements View.OnClickListener {
-    Button save;
+    Button save, settings;
     TextView title;
 
     @Override
@@ -23,9 +23,11 @@ public class NewCharacter extends AppCompatActivity implements View.OnClickListe
 
         title = findViewById(R.id.newCharacterTitle);
 
-        //Buttons
         save = findViewById(R.id.newCharacterSaveButton);
         save.setOnClickListener(this);
+
+        settings.findViewById(R.id.newCharacterOverlayButton);
+        settings.setOnClickListener(this);
 
         ViewGroup content = findViewById(R.id.newCharacterLayout);
         content.removeAllViews();
