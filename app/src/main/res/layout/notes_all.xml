@@ -49,7 +49,7 @@
             android:orientation="vertical">
 
 
-            <include layout="@layout/notes_list" />
+            <include layout="@layout/notes_list_entries" />
 
         </LinearLayout>
     </ScrollView>

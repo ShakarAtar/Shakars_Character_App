@@ -5,48 +5,48 @@
     android:id="@+id/characterListBG"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purpleBackgroundColour">
+    android:background="?attr/background">
 
     <ScrollView
+        android:id="@+id/characterListScroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="265dp">
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createNewCharacterTV"
+        tools:layout_editor_absoluteX="1dp">
 
         <LinearLayout
+            android:id="@+id/characterListLL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
-                android:layout_width="334dp"
-                android:layout_height="531dp" />
+            <include layout="@layout/character_list_entries" />
         </LinearLayout>
     </ScrollView>
 
     <ImageButton
         android:id="@+id/characterListOverlayButton"
-        android:layout_width="51dp"
-        android:layout_height="42dp"
-        android:background="@color/purpleBackgroundColour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/background"
         android:contentDescription="@string/overlay_button"
-        android:tint="#993B234F"
+        android:tint="?attr/textFieldColour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.001"
-        app:srcCompat="@android:drawable/btn_dropdown" />
+        app:srcCompat="@drawable/settings" />
 
     <TextView
         android:id="@+id/characterListTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/characters"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/purpleTextColour"
+        android:textColor="?attr/textColour"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,11 +55,12 @@
         app:layout_constraintVertical_bias="0.120000005" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/createNewCharacterTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="true"
         android:text="@string/createNewChar"
-        android:textColor="@color/purpleTextColour"
+        android:textColor="?attr/textColour"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,7 +75,7 @@
         android:layout_height="28dp"
         android:background="@android:drawable/ic_menu_add"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/createNewCharacterTV"
         app:layout_constraintHorizontal_bias="0.919"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
