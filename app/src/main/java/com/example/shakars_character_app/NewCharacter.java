@@ -41,7 +41,7 @@ public class NewCharacter extends AppCompatActivity implements View.OnClickListe
             catTitleTv.setOnClickListener(this);
             catTitleTv.setTag(catIndex);
             content.addView(catRoot);
-            categorieisLL.add(cat_title_ll);
+            categoriesLL.add(cat_title_ll);
             cat_title_ll.setVisibility(CatagoriesAndProperties.folded[catIndex] ? View.GONE : View.VISIBLE);
 
             int[] props = CatagoriesAndProperties.data.propertiesPC[catIndex];
@@ -54,7 +54,7 @@ public class NewCharacter extends AppCompatActivity implements View.OnClickListe
 
                 int hintIndex = propIndex;
                 if (hintIndex>=hints.length) {
-                    System.err.println("Mangler hint for "+catIndex+", "+propIndex);
+                    System.err.println("Missing hint for "+catIndex+", "+propIndex);
                     hintIndex = 0;
                 }
                 EditText hintTV = root.findViewById(R.id.hints);
@@ -73,9 +73,8 @@ public class NewCharacter extends AppCompatActivity implements View.OnClickListe
         public void onClick (View v){
             int catIndex = (int) v.getTag();
             CatagoriesAndProperties.folded[catIndex] = !CatagoriesAndProperties.folded[catIndex];
-            //categorieisLL.get(catIndex).setVisibility( foldetIn[catIndex] ? View.GONE : View.VISIBLE );
 
-            View cat = categorieisLL.get(catIndex);
+            View cat = categoriesLL.get(catIndex);
             if (CatagoriesAndProperties.folded[catIndex]) {
                 cat.animate().scaleY(0);
 
@@ -88,8 +87,7 @@ public class NewCharacter extends AppCompatActivity implements View.OnClickListe
         }
 
 
-        ArrayList<View> categorieisLL = new ArrayList<>();
-        ArrayList<View> hintsTV = new ArrayList<>();
+        ArrayList<View> categoriesLL = new ArrayList<>();
 
 
 

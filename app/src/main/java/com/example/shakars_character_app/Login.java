@@ -33,16 +33,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         //Text Fields
         title = findViewById(R.id.loginAppTitle);
-
         username = findViewById(R.id.loginPageUsernameText);
-
         password = findViewById(R.id.loginPasswordText);
-
         forgotPassword = findViewById(R.id.loginForgotPasswordClickable);
 
         //Edit Text Fields
         usernameInput = findViewById(R.id.loginUsernameEditText);
-
         passwordInput = findViewById(R.id.loginPasswordEditText);
 
     }

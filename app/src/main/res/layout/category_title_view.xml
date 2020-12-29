@@ -22,7 +22,7 @@
         android:textSize="18sp" />
 
     <LinearLayout
-        android:id="@+id/cat_title_ll"
+        android:id="@+id/cat_title_ll_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
