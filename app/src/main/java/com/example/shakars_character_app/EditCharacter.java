@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -13,7 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class EditCharacter extends AppCompatActivity implements View.OnClickListener {
-    Button save, settings;
+    Button save;
+    ImageButton settings;
     TextView title;
 
     @Override
