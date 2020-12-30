@@ -33,7 +33,7 @@ public class ViewCharacter extends AppCompatActivity implements View.OnClickList
         ViewGroup content = findViewById(R.id.viewCharacterLayout);
         content.removeAllViews();
 
-        for (int catIndex = 0; catIndex < CatagoriesAndProperties.data.categoriesPC.length; catIndex++) {
+        for (int catIndex = 0; catIndex < CategoriesAndProperties.dataPC.categoriesPC.length; catIndex++) {
             View catRoot = getLayoutInflater().inflate(R.layout.category_title_view,content,false);
             LinearLayout cat_title_ll = catRoot.findViewById(R.id.cat_title_ll_view);
             cat_title_ll.removeAllViews();
@@ -42,10 +42,10 @@ public class ViewCharacter extends AppCompatActivity implements View.OnClickList
             cat_title_ll.setTag(catIndex);
             content.addView(catRoot);
             categoriesLL.add(cat_title_ll);
-            cat_title_ll.setVisibility(CatagoriesAndProperties.folded[catIndex] ? View.GONE : View.VISIBLE);
+            cat_title_ll.setVisibility(CategoriesAndProperties.foldedPC[catIndex] ? View.GONE : View.VISIBLE);
 
-            int[] props = CatagoriesAndProperties.data.propertiesPC[catIndex];
-            int [] hints = CatagoriesAndProperties.data.hintsPC[catIndex];
+            int[] props = CategoriesAndProperties.dataPC.propertiesPC[catIndex];
+            int [] hints = CategoriesAndProperties.dataPC.hintsPC[catIndex];
             for (int propIndex = 0; propIndex < props.length ; propIndex++) {
 
                 View root = getLayoutInflater().inflate(R.layout.category_property_view,content,false);
@@ -73,10 +73,10 @@ public class ViewCharacter extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         int catIndex = (int) v.getTag();
-        CatagoriesAndProperties.folded[catIndex] = !CatagoriesAndProperties.folded[catIndex];
+        CategoriesAndProperties.foldedPC[catIndex] = !CategoriesAndProperties.foldedPC[catIndex];
 
         View cat = categoriesLL.get(catIndex);
-        if (CatagoriesAndProperties.folded[catIndex]) {
+        if (CategoriesAndProperties.foldedPC[catIndex]) {
             cat.animate().scaleY(0);
 
         } else {

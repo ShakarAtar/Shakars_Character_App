@@ -1,6 +1,6 @@
 package com.example.shakars_character_app;
 
-public class CatagoriesAndProperties {
+public class CategoriesAndProperties {
 
     static class CategoriesAndPropertiesPC {
         int[] categoriesPC = {R.string.basic, R.string.looks, R.string.personalityTraits, R.string.relations, R.string.goalsAndBG};
@@ -46,6 +46,8 @@ public class CatagoriesAndProperties {
         };
     }
 
-    static CategoriesAndPropertiesPC data = new CategoriesAndPropertiesPC();
-    static boolean[] folded = new boolean[data.categoriesPC.length];
+    static CategoriesAndPropertiesPC dataPC = new CategoriesAndPropertiesPC();
+    static CategoriesAndPropertiesNPC dataNPC = new CategoriesAndPropertiesNPC();
+    static boolean[] foldedPC = new boolean[dataPC.categoriesPC.length];
+    static boolean[] foldedNPC = new boolean[dataNPC.categoriesNPC.length];
 }
