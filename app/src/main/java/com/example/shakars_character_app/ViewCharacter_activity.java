@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class ViewCharacter extends AppCompatActivity implements View.OnClickListener {
+public class ViewCharacter_activity extends AppCompatActivity implements View.OnClickListener {
     Button edit;
     ImageButton settings;
     TextView title;

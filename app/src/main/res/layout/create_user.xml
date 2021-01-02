@@ -2,17 +2,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/myProfileBackground"
+    android:id="@+id/createUserBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/background">
 
     <TextView
-        android:id="@+id/myProfileTitle"
+        android:id="@+id/createUserTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/myProfile"
+        android:text="@string/createNewUser"
         android:textColor="?attr/textColour"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,7 +21,7 @@
         app:layout_constraintVertical_bias="0.12" />
 
     <TextView
-        android:id="@+id/myProfileUsernameText"
+        android:id="@+id/createUserUsernameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/username"
@@ -36,7 +35,7 @@
         app:layout_constraintVertical_bias="0.269" />
 
     <EditText
-        android:id="@+id/myProfileUsernameEditText"
+        android:id="@+id/createUserUsernameEditText"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -49,26 +48,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myProfileUsernameText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/createUserUsernameText"
+        app:layout_constraintVertical_bias="0.0"
+        android:importantForAutofill="no" />
 
     <Button
-        android:id="@+id/myProfileEditUsername"
-        android:layout_width="54dp"
-        android:layout_height="27dp"
+        android:id="@+id/createUserDone"
+        android:layout_width="64dp"
+        android:layout_height="37dp"
         android:layout_marginStart="1dp"
         android:background="?attr/buttonColour"
-        android:text="@string/edit"
+        android:text="@string/done"
         android:textColor="?attr/textColour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.285"
-        app:layout_constraintStart_toEndOf="@+id/myProfileUsernameEditText"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createUserPasswordEditText"
+        app:layout_constraintVertical_bias="0.51" />
 
     <TextView
-        android:id="@+id/myProfilePasswordText"
+        android:id="@+id/createUserPasswordText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/password"
@@ -78,11 +78,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myProfileUsernameText"
+        app:layout_constraintTop_toBottomOf="@+id/createUserUsernameText"
         app:layout_constraintVertical_bias="0.19" />
 
     <EditText
-        android:id="@+id/myProfilePasswordEditText"
+        android:id="@+id/createUserPasswordEditText"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:background="?attr/overlayColour"
@@ -94,25 +94,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myProfilePasswordText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/createUserPasswordText"
+        app:layout_constraintVertical_bias="0.0"
+        android:importantForAutofill="no" />
 
-    <Button
-        android:id="@+id/myProfileEditPassword"
-        android:layout_width="53dp"
-        android:layout_height="28dp"
-        android:background="?attr/buttonColour"
-        android:text="@string/edit"
-        android:textColor="?attr/textColour"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.318"
-        app:layout_constraintStart_toEndOf="@+id/myProfilePasswordEditText"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.477" />
 
     <ImageButton
-        android:id="@+id/myProfileOverlayButton"
+        android:id="@+id/createUserOverlayButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="?attr/background"
@@ -125,5 +113,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.001"
         app:srcCompat="@drawable/settings"  />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

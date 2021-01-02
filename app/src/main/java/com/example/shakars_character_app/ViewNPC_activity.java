@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -13,32 +12,32 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class EditNPC extends AppCompatActivity implements View.OnClickListener {
-    Button save;
+public class ViewNPC_activity extends AppCompatActivity implements View.OnClickListener {
+    Button edit;
     ImageButton settings;
     TextView title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.edit_npc);
+        setContentView(R.layout.view_npc);
 
-        title = findViewById(R.id.editNPCTitle);
+        title = findViewById(R.id.viewNPCTitle);
 
-        save = findViewById(R.id.editNPCSaveButton);
-        save.setOnClickListener(this);
+        edit = findViewById(R.id.viewNPCEditButton);
+        edit.setOnClickListener(this);
 
-        settings = findViewById(R.id.editNPCOverlayButton);
+        settings = findViewById(R.id.viewNPCOverlayButton);
         settings.setOnClickListener(this);
 
-        ViewGroup content = findViewById(R.id.editNPCLayout);
+        ViewGroup content = findViewById(R.id.viewNPCLayout);
         content.removeAllViews();
 
         for (int catIndex = 0; catIndex < CategoriesAndProperties.dataNPC.categoriesNPC.length; catIndex++) {
-            View catRoot = getLayoutInflater().inflate(R.layout.category_title,content,false);
-            LinearLayout cat_title_ll = catRoot.findViewById(R.id.cat_title_ll);
+            View catRoot = getLayoutInflater().inflate(R.layout.category_title_view,content,false);
+            LinearLayout cat_title_ll = catRoot.findViewById(R.id.cat_title_ll_view);
             cat_title_ll.removeAllViews();
-            TextView catTitleTV = catRoot.findViewById(R.id.categoriesTV);
+            TextView catTitleTV = catRoot.findViewById(R.id.viewCategoriesTV);
             catTitleTV.setText(CategoriesAndProperties.dataNPC.categoriesNPC[catIndex]);
             catTitleTV.setOnClickListener(this);
             catTitleTV.setTag(catIndex);
@@ -50,30 +49,26 @@ public class EditNPC extends AppCompatActivity implements View.OnClickListener {
             int[] hints = CategoriesAndProperties.dataNPC.hintsNPC[catIndex];
             for (int propIndex = 0; propIndex < props.length; propIndex++) {
 
-                View root = getLayoutInflater().inflate(R.layout.category_property,content,false);
-                TextView titleTV = root.findViewById(R.id.propertiesTV);
+                View root = getLayoutInflater().inflate(R.layout.category_property_view, content, false);
+                TextView titleTV = root.findViewById(R.id.viewPropertiesTV);
                 titleTV.setText(props[propIndex]);
 
                 int hintIndex = propIndex;
                 if (hintIndex >= hints.length) {
-                    System.err.println("Missing hint for "+catIndex+", "+propIndex);
+                    System.err.println("Missing hint for"+catIndex+"+"+propIndex);
                     hintIndex = 0;
                 }
-                EditText hintTV = root.findViewById(R.id.hints);
+                TextView hintTV = root.findViewById(R.id.viewHints);
                 hintTV.setHint(hints[hintIndex]);
-                hintTV.setTag(hints[hintIndex]);
+                hintTV.setTag(hintIndex);
 
                 cat_title_ll.addView(root);
             }
-
-
         }
 
 
-
-
-
     }
+
 
     @Override
     public void onClick(View v) {
@@ -93,4 +88,5 @@ public class EditNPC extends AppCompatActivity implements View.OnClickListener {
     }
 
     ArrayList<View> categoriesLL = new ArrayList<>();
+
 }

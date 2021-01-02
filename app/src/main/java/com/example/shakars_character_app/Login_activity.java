@@ -1,5 +1,6 @@
 package com.example.shakars_character_app;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +10,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Login extends AppCompatActivity implements View.OnClickListener {
+public class Login_activity extends AppCompatActivity implements View.OnClickListener {
 
     Button login, createUser;
     TextView title, username, password, forgotPassword;
@@ -45,6 +46,14 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        if (login.getId() == v.getId()) {
+            Intent intent = new Intent(v.getContext(),FrontPage_activity.class);
+            v.getContext().startActivity(intent);
+
+        } else if (createUser.getId() == v.getId()){
+            Intent intent = new Intent(v.getContext(),CreateUser_activity.class);
+            v.getContext().startActivity(intent);
+        }
 
     }
 }

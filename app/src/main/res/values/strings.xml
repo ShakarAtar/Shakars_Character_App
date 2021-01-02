@@ -16,6 +16,7 @@
     <string name="NPCs">NPCs</string>
     <string name="notes">Notes</string>
     <string name="shared">Shared</string>
+    <string name="done">Done</string>
     //Login text
     <string name="forgotPassword">Forgot Password?</string>
     <string name="login">Login</string>
@@ -27,6 +28,8 @@
     <string name="theme">Theme</string>
     <string name="themeName">Theme Name</string>
     <string name="language">Language</string>
+    //Create New User
+    <string name="createNewUser">Create New User</string>
     //Characters
     <string name="createNewChar">Create New Character</string>
     <string name="newCharacter">New Character</string>

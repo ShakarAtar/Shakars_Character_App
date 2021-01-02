@@ -9,12 +9,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/purpleTheme">
-        <activity android:name=".NewCharacter">
+        <activity android:name=".Login_activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".CreateUser_activity">
+
+        </activity>
+        <activity android:name=".EditCharacter_activity">
+
+        </activity>
+        <activity android:name=".EditNPC_activity">
+
+        </activity>
+        <activity android:name=".FrontPage_activity">
+
+        </activity>
+        <activity android:name=".NewCharacter_activity">
+
+        </activity>
+        <activity android:name=".NewNPC_activity">
+
+        </activity>
+        <activity android:name=".ViewCharacter_activity">
+
+        </activity>
+        <activity android:name=".ViewNPC_activity">
+
         </activity>
         <meta-data
             android:name="preloaded_fonts"

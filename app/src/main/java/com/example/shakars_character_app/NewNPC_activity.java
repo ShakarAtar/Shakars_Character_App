@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class NewNPC extends AppCompatActivity implements View.OnClickListener {
+public class NewNPC_activity extends AppCompatActivity implements View.OnClickListener {
     Button save;
     ImageButton settings;
     TextView title;

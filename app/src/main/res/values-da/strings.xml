@@ -112,4 +112,6 @@
     <string name="editCharacter">Rediger Character</string>
     <string name="viewNPC">Vis NPC</string>
     <string name="editNPC">Rediger NPC</string>
+    <string name="done">Færdig</string>
+    <string name="createNewUser">Lav Ny Bruger</string>
 </resources>

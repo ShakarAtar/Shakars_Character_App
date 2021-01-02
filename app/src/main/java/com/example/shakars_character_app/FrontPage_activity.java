@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class FrontPage extends AppCompatActivity implements View.OnClickListener {
+public class FrontPage_activity extends AppCompatActivity implements View.OnClickListener {
 
     ImageButton characters, npcs, notes, settings;
     TextView title, charactersTVClick, npcsTVClick, notesTVClick;
