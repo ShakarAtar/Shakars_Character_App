@@ -49,6 +49,7 @@ public class Login_activity extends AppCompatActivity implements View.OnClickLis
         if (login.getId() == v.getId()) {
             Intent intent = new Intent(v.getContext(),FrontPage_activity.class);
             v.getContext().startActivity(intent);
+            //TODO: Only if a correct user has been inputted
 
         } else if (createUser.getId() == v.getId()){
             Intent intent = new Intent(v.getContext(),CreateUser_activity.class);

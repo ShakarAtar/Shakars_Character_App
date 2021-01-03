@@ -112,15 +112,15 @@
     <string name="enemies">Enemies</string>
     <string name="enemiesSuggestions">Avengers, The Mob, Vampire Clan, The Duke, Your Sister, That One Bard in the Tavern</string>
     <string name="affiliatedGroups">Affiliated Groups</string>
-    <string name="affiliatedGroupsSuggestions">Hydra, The Thieve\'s Guild, The Paladin Order, Children of The Moon, The Wanderers Of The Unbeaten Path</string>
+    <string name="affiliatedGroupsSuggestions">Hydra, The Thieves\'s Guild, The Paladin Order, Children of The Moon, The Wanderers Of The Unbeaten Path</string>
     // Goals and Background
     <string name="goalsAndBG">Goals and Background</string> //Catagory
     <string name="currentGoals">Current Goals</string>
     <string name="currentGoalsSuggestions">Bed the Hot Tavern Wench, Save the Princess, Avenge your Father\'s Death</string>
     <string name="backgroundStory">Background Story</string>
-    <string name="backgroundStorySuggestions">It Can Range From: Orc Killed my Family to I Am the Thirtheenth Son of The Thirtheenth Son and I am Destined to Eradicate All Evil, Or it Can Be Simply I Still Have My Parents and I Really Just Want to Adventure</string>
+    <string name="backgroundStorySuggestions">It Can Range From: Orc Killed my Family to I Am the Thirteenth Son of The Thirteenth Son and I am Destined to Eradicate All Evil, Or it Can Be Simply I Still Have My Parents and I Really Just Want to Adventure</string>
     //Descriptors for NPCs only
-    <string name="npcDescriptions">Descriptors for NPCs only</string> //Catagory
+    <string name="npcDescriptions">Descriptors for NPCs only</string> //Category
     <string name="specialAbilities">Special Abilities</string>
     <string name="specialAbilitiesSuggestions">Death Lasers Eyes, Charm Anything, Super Speed, Sneaky as Fuck</string>
     <string name="partOfWorld">How Are They Part of The World?</string>
@@ -132,6 +132,6 @@
     <string name="motivations">Motivations</string>
     <string name="motivationsSuggestions">Is Obsessed With One of the PCs, Has Ulterior Motives, Wants The Party to Succeed, Needs The Party To Retrieve an Object</string>
     <string name="overlay_button">Overlay Button</string>
-    <string name="charactername">characterName</string>
+    <string name="characterName">characterName</string>
 
 </resources>

@@ -13,7 +13,7 @@
         android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createNewCharacterTV"
+        app:layout_constraintTop_toBottomOf="@+id/characterListCreateNewCharacterTV"
         tools:layout_editor_absoluteX="1dp">
 
         <LinearLayout
@@ -55,7 +55,7 @@
         app:layout_constraintVertical_bias="0.120000005" />
 
     <TextView
-        android:id="@+id/createNewCharacterTV"
+        android:id="@+id/characterListCreateNewCharacterTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
@@ -75,7 +75,7 @@
         android:layout_height="28dp"
         android:background="@android:drawable/ic_menu_add"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/createNewCharacterTV"
+        app:layout_constraintEnd_toStartOf="@+id/characterListCreateNewCharacterTV"
         app:layout_constraintHorizontal_bias="0.919"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
