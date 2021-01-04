@@ -1,5 +1,6 @@
 package com.example.shakars_character_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -84,6 +85,11 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
                 cat.setVisibility(View.VISIBLE);
                 cat.animate().scaleY(1);
 
+            }
+
+            if (save.getId() == v.getId()) {
+                Intent intent = new Intent(v.getContext(),ViewCharacter_activity.class);
+                v.getContext().startActivity(intent);
             }
 
         }

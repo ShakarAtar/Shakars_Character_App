@@ -16,6 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AllCharacters_activity">
+
+        </activity>
+        <activity android:name=".AllNotes_activity">
+
+        </activity>
+        <activity android:name=".AllNPCS_activity">
+
+        </activity>
         <activity android:name=".CreateUser_activity">
 
         </activity>
@@ -28,10 +37,16 @@
         <activity android:name=".FrontPage_activity">
 
         </activity>
+        <activity android:name=".MyProfile_activity">
+
+        </activity>
         <activity android:name=".NewCharacter_activity">
 
         </activity>
         <activity android:name=".NewNPC_activity">
+
+        </activity>
+        <activity android:name=".Setting_activity">
 
         </activity>
         <activity android:name=".ViewCharacter_activity">

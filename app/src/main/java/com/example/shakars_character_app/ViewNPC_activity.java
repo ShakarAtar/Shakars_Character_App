@@ -1,5 +1,6 @@
 package com.example.shakars_character_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -83,6 +84,11 @@ public class ViewNPC_activity extends AppCompatActivity implements View.OnClickL
             cat.setVisibility(View.VISIBLE);
             cat.animate().scaleY(1);
 
+        }
+
+        if (edit.getId() == v.getId()) {
+            Intent intent = new Intent(v.getContext(),EditNPC_activity.class);
+            v.getContext().startActivity(intent);
         }
 
     }
