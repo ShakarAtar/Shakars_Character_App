@@ -18,6 +18,7 @@ public class AllCharacters_activity extends AppCompatActivity implements View.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.character_list);
 
         newCharButton = findViewById(R.id.characterListCreateNewCharButton);
         newCharButton.setOnClickListener(this);

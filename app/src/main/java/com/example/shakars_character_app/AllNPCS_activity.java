@@ -18,6 +18,7 @@ public class AllNPCS_activity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.npc_list);
 
         newNPCButton = findViewById(R.id.NPCListCreateNewNPCButton);
         newNPCButton.setOnClickListener(this);

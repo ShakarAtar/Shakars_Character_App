@@ -8,7 +8,7 @@
     android:background="?attr/background">
 
     <ImageButton
-        android:id="@+id/notesOverlayButton"
+        android:id="@+id/notesListOverlayButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="?attr/background"
@@ -23,7 +23,7 @@
         app:srcCompat="@drawable/settings" />
 
     <TextView
-        android:id="@+id/notesTitle"
+        android:id="@+id/notesListTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/notes"
@@ -40,11 +40,11 @@
         android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notesTitle"
+        app:layout_constraintTop_toBottomOf="@+id/notesListTitle"
         tools:layout_editor_absoluteX="1dp">
 
         <LinearLayout
-            android:id="@+id/notesCharacterLayout"
+            android:id="@+id/notesListCharacterLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">

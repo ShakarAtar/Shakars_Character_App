@@ -18,6 +18,8 @@ public class CreateUser_activity extends AppCompatActivity implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.create_user);
+
         done = findViewById(R.id.createUserDone);
         done.setOnClickListener(this);
 

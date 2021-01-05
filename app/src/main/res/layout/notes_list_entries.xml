@@ -10,4 +10,4 @@
     android:text="@string/characterName"
     android:textColor="?attr/textColour"
     android:textSize="18sp"
-    tools:showIn="@layout/notes_all" />
+    tools:showIn="@layout/notes_list" />

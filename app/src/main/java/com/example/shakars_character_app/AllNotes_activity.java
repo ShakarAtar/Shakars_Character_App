@@ -15,11 +15,12 @@ public class AllNotes_activity extends AppCompatActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.notes_list);
 
-        settings = findViewById(R.id.notesOverlayButton);
+        settings = findViewById(R.id.notesListOverlayButton);
         settings.setOnClickListener(this);
 
-        title = findViewById(R.id.notesTitle);
+        title = findViewById(R.id.notesListTitle);
     }
 
     @Override
