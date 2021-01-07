@@ -29,8 +29,8 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
         save = findViewById(R.id.newCharacterSaveButton);
         save.setOnClickListener(this);
 
-//        settings.findViewById(R.id.newCharacterOverlayButton);
-//        settings.setOnClickListener(this);
+        settings = findViewById(R.id.newCharacterOverlayButton);
+        settings.setOnClickListener(this);
 
         ViewGroup content = findViewById(R.id.newCharacterLayout);
         content.removeAllViews();

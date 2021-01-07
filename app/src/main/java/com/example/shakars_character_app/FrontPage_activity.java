@@ -47,15 +47,15 @@ public class FrontPage_activity extends AppCompatActivity implements View.OnClic
 
     @Override
     public void onClick(View v) {
-        if (characters.getId() == v.getId()) {
+        if (characters.getId() == v.getId() || charactersTVClick.getId() == v.getId()) {
             Intent intent = new Intent(v.getContext(), AllCharacters_activity.class);
             v.getContext().startActivity(intent);
 
-        } else if (npcs.getId() == v.getId()) {
+        } else if (npcs.getId() == v.getId() || npcsTVClick.getId() == v.getId()) {
             Intent intent = new Intent(v.getContext(), AllNPCS_activity.class);
             v.getContext().startActivity(intent);
 
-        } else if (notes.getId() == v.getId()) {
+        } else if (notes.getId() == v.getId() || notesTVClick.getId() == v.getId()) {
             Intent intent = new Intent(v.getContext(),AllNotes_activity.class);
             v.getContext().startActivity(intent);
 

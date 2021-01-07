@@ -24,12 +24,12 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_character);
 
-        title.findViewById(R.id.editCharacterTitle);
+        title = findViewById(R.id.editCharacterTitle);
 
-        save.findViewById(R.id.editCharacterSaveButton);
+        save = findViewById(R.id.editCharacterSaveButton);
         save.setOnClickListener(this);
 
-        settings.findViewById(R.id.editOverlayButton);
+        settings = findViewById(R.id.editOverlayButton);
         settings.setOnClickListener(this);
 
         ViewGroup content = findViewById(R.id.editCharacterLayout);

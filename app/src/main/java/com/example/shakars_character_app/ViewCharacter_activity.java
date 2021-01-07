@@ -28,7 +28,7 @@ public class ViewCharacter_activity extends AppCompatActivity implements View.On
         edit = findViewById(R.id.viewCharacterEditButton);
         edit.setOnClickListener(this);
 
-        settings.findViewById(R.id.viewOverlayButton);
+        settings = findViewById(R.id.viewCharacterOverlayButton);
         settings.setOnClickListener(this);
 
         ViewGroup content = findViewById(R.id.viewCharacterLayout);
