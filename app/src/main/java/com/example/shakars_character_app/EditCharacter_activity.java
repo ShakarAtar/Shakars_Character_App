@@ -75,18 +75,18 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
 
     @Override
     public void onClick(View v) {
-//        int catIndex = (int) v.getTag();
-//        CategoriesAndProperties.foldedPC[catIndex] = !CategoriesAndProperties.foldedPC[catIndex];
-//
-//        View cat = categoriesLL.get(catIndex);
-//        if (CategoriesAndProperties.foldedPC[catIndex]) {
-//            cat.animate().scaleY(0);
-//
-//        } else {
-//            cat.setVisibility(View.VISIBLE);
-//            cat.animate().scaleY(1);
-//
-//        }
+        int catIndex = (int) v.getTag();
+        CategoriesAndProperties.foldedPC[catIndex] = !CategoriesAndProperties.foldedPC[catIndex];
+
+        View cat = categoriesLL.get(catIndex);
+        if (CategoriesAndProperties.foldedPC[catIndex]) {
+            cat.animate().scaleY(0);
+
+        } else {
+            cat.setVisibility(View.VISIBLE);
+            cat.animate().scaleY(1);
+
+        }
 
         if (save.getId() == v.getId()) {
             Intent intent = new Intent(v.getContext(),ViewCharacter_activity.class);
