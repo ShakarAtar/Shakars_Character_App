@@ -5,9 +5,9 @@
     <string name="greenTheme" translatable="false">greenTheme</string>
     <string name="purpleTheme" translatable="false">purpleTheme</string>
 
-    <string name="app_name">Shakars_Character_App</string>
+    <string name="app_name" translatable="false">Loot Goblin\'s Reliquary</string>
     //Text all over the app
-    <string name="appTitle">Shakar\'s Character App</string>
+    <string name="appTitle" translatable="false">Loot Goblin\'s Reliquary</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="edit">Edit</string>
@@ -60,15 +60,17 @@
     <string name="continent">Continent</string>
     <string name="continentSuggestion">Shanay Karren, Europe, Jartareth, Asia</string>
     <string name="rpClass">Class</string>
-    <string name="rpClassSuggestion">Hunter, Figther, Operative, Sniper, Warlock</string>
+    <string name="rpClassSuggestion">Hunter, Fighter, Operative, Sniper, Warlock</string>
     <string name="sexuality">Sexuality</string>
     <string name="sexualitySuggestion">Straight, Bi, Gay, Asexual, Pansexual</string>
+    <string name="traitsAttracted">Traits Attracted To</string>
+    <string name="traitsAttractedSuggestion">Specific Races, Personality Traits, Physical traits, Behaviours</string>
     <string name="occupation">Occupation</string>
     <string name="occupationSuggestion">Spymaster, Assassin, Baker, Queen, Spaceship Pilot</string>
     <string name="religion">Religion</string>
     <string name="religionSuggestion">Calistria, Shamanism, The God Emperor, Christian, Asmodeus</string>
     //Looks
-    <string name="looks">Looks</string> //Catagory
+    <string name="looks">Looks</string> //Category
     <string name="eyes">Eyes</string>
     <string name="eyesSuggestion">Green, Magenta, Almond Shaped, Cat\'s Pupil, Multiple Eyes Like a Spider, Completely White</string>
     <string name="skin">Skin</string>
@@ -82,7 +84,7 @@
     <string name="characteristicFeatures">Characteristic Features</string>
     <string name="characteristicFeaturesSuggestions">Tattoos, Scars, Birthmarks, Horns, Hoofed Feet, Gills</string>
     //Personality Traits
-    <string name="personalityTraits">Personality Traits</string> //Catagory
+    <string name="personalityTraits">Personality Traits</string> //Category
     <string name="personality">Personality</string>
     <string name="personalitySuggestion">Creative Scientist, Leader, Gentle Soul, Mediator, Survivor</string>
     <string name="behaviourAndManners">Behaviour and Manners</string>
@@ -104,7 +106,7 @@
     <string name="secrets">Secrets</string>
     <string name="secretsSuggestion">Is the Child of The Bad Guy, Is a Undercover Spy, Is a Vampire, Steals From The Party, Sold His Soul to A Demon</string>
     //Relations
-    <string name="relations">Relations</string> //Catagory
+    <string name="relations">Relations</string> //Category
     <string name="family">Family</string>
     <string name="familySuggestions">Mother, Father, Siblings, Uncles, Cousins, Evil Twins</string>
     <string name="alliesAndContacts">Allies and Contacts</string>
@@ -114,7 +116,7 @@
     <string name="affiliatedGroups">Affiliated Groups</string>
     <string name="affiliatedGroupsSuggestions">Hydra, The Thieves\'s Guild, The Paladin Order, Children of The Moon, The Wanderers Of The Unbeaten Path</string>
     // Goals and Background
-    <string name="goalsAndBG">Goals and Background</string> //Catagory
+    <string name="goalsAndBG">Goals and Background</string> //Category
     <string name="currentGoals">Current Goals</string>
     <string name="currentGoalsSuggestions">Bed the Hot Tavern Wench, Save the Princess, Avenge your Father\'s Death</string>
     <string name="backgroundStory">Background Story</string>

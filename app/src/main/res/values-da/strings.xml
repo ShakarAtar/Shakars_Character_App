@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Shakars_Character_App</string>
     <string name="username">Brugernavn</string>
-    <string name="appTitle">Shakar\'s Character App</string>
     <string name="password">Kodeord</string>
     <string name="edit">Ændr</string>
     <string name="save">Gem</string>
@@ -114,4 +112,6 @@
     <string name="editNPC">Rediger NPC</string>
     <string name="done">Færdig</string>
     <string name="createNewUser">Lav Ny Bruger</string>
+    <string name="traitsAttracted">Tiltrukket af Træk</string>
+    <string name="traitsAttractedSuggestion">Specifikke Racer, Personlighedstræk, Fysiske Træk, Væremåder</string>
 </resources>

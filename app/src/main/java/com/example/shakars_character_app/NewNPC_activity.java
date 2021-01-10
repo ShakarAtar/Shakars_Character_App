@@ -74,22 +74,26 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        int catIndex = (int) v.getTag();
-        CategoriesAndProperties.foldedNPC[catIndex] = !CategoriesAndProperties.foldedNPC[catIndex];
-
-        View cat = categoriesLL.get(catIndex);
-        if (CategoriesAndProperties.foldedNPC[catIndex]) {
-            cat.animate().scaleY(0);
-
-        } else {
-            cat.setVisibility(View.VISIBLE);
-            cat.animate().scaleY(1);
-
-        }
-
         if (save.getId() == v.getId()) {
             Intent intent = new Intent(v.getContext(),ViewNPC_activity.class);
             v.getContext().startActivity(intent);
+        }
+
+        Object tag = v.getTag();
+        if (tag != null) {
+            int catIndex = (int) tag;
+            CategoriesAndProperties.foldedNPC[catIndex] = !CategoriesAndProperties.foldedNPC[catIndex];
+
+            View cat = categoriesLL.get(catIndex);
+            if (CategoriesAndProperties.foldedNPC[catIndex]) {
+                cat.animate().scaleY(0);
+
+            } else {
+                cat.setVisibility(View.VISIBLE);
+                cat.animate().scaleY(1);
+
+            }
+
         }
 
     }
