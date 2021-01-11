@@ -55,6 +55,7 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
                 TextView titleTV = root.findViewById(R.id.propertiesTV);
                 titleTV.setText(props[propIndex]);
 
+
                 int hintIndex = propIndex;
                 if (hintIndex >= hints.length) {
                     System.err.println("Missing hint for "+catIndex+", "+propIndex);
@@ -95,6 +96,7 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
                 }
 
             }
+
 
 
         }

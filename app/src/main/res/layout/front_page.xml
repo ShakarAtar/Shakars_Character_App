@@ -128,6 +128,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.001"
-        app:srcCompat="@drawable/settings" />
+        app:srcCompat="@drawable/gear" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
