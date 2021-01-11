@@ -10,14 +10,14 @@
 
     <TextView
         android:id="@+id/appTitleFrontPage"
-        android:layout_width="151dp"
-        android:layout_height="171dp"
+        android:layout_width="149dp"
+        android:layout_height="132dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/appTitle"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textSize="30sp"
         android:textColor="?attr/textColour"
+        android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -33,12 +33,13 @@
         android:fontFamily="sans-serif-light"
         android:text="@string/characters"
         android:textColor="?attr/textColour"
-        android:textSize="25sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.554"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.55" />
+        app:layout_constraintVertical_bias="0.548" />
 
     <ImageButton
         android:id="@+id/frontPageCharButton"
@@ -49,11 +50,11 @@
         android:contentDescription="@string/characters"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/frontPageCharactersText"
-        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintHorizontal_bias="0.861"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.552"
-        app:srcCompat="@android:drawable/ic_menu_compass" />
+        app:layout_constraintVertical_bias="0.548"
+        app:srcCompat="@drawable/character_icon" />
 
     <TextView
         android:id="@+id/frontPageNPCText"
@@ -63,13 +64,13 @@
         android:fontFamily="sans-serif-light"
         android:text="@string/NPCs"
         android:textColor="?attr/textColour"
-        android:textSize="25sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.648" />
+        app:layout_constraintTop_toBottomOf="@+id/frontPageCharactersText"
+        app:layout_constraintVertical_bias="0.154" />
 
     <ImageButton
         android:id="@+id/frontPageNPCsButton"
@@ -79,11 +80,11 @@
         android:contentDescription="@string/NPCs"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/frontPageNPCText"
-        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintHorizontal_bias="0.861"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.649"
-        app:srcCompat="@android:drawable/ic_menu_myplaces" />
+        app:layout_constraintTop_toBottomOf="@+id/frontPageCharButton"
+        app:layout_constraintVertical_bias="0.154"
+        app:srcCompat="@drawable/npc_icon" />
 
     <TextView
         android:id="@+id/frontPageNotesText"
@@ -93,13 +94,13 @@
         android:fontFamily="sans-serif-light"
         android:text="@string/notes"
         android:textColor="?attr/textColour"
-        android:textSize="25sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintTop_toBottomOf="@+id/frontPageNPCText"
+        app:layout_constraintVertical_bias="0.21" />
 
     <ImageButton
         android:id="@+id/frontPageNotesButton"
@@ -109,11 +110,11 @@
         android:contentDescription="@string/notes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/frontPageNotesText"
-        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintHorizontal_bias="0.861"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.751"
-        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+        app:layout_constraintTop_toBottomOf="@+id/frontPageNPCsButton"
+        app:layout_constraintVertical_bias="0.205"
+        app:srcCompat="@drawable/notes_icon" />
 
     <ImageButton
         android:id="@+id/frontPageOverlayButton"
@@ -121,13 +122,12 @@
         android:layout_height="wrap_content"
         android:background="?attr/background"
         android:contentDescription="@string/overlay_button"
-        android:tint="?attr/textFieldColour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.99"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.001"
-        app:srcCompat="@drawable/gear" />
+        app:layout_constraintVertical_bias="0.01"
+        app:srcCompat="@drawable/settings_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
