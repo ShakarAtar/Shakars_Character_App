@@ -7,8 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Login_activity extends AppCompatActivity implements View.OnClickListener {
 
@@ -17,6 +21,7 @@ public class Login_activity extends AppCompatActivity implements View.OnClickLis
     EditText usernameInput, passwordInput;
     SharedPreferences sharedPref;
     String currentTheme, sharedPreference;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +47,27 @@ public class Login_activity extends AppCompatActivity implements View.OnClickLis
         usernameInput = findViewById(R.id.loginUsernameEditText);
         passwordInput = findViewById(R.id.loginPasswordEditText);
 
+        // Initialize Firebase Auth
+        mAuth = FirebaseAuth.getInstance();
+
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        updateUI(currentUser);
+    }
+
+    private void updateUI(FirebaseUser currentUser) {
+        if (currentUser != null) {
+            Toast.makeText(this, "Username and Password is correct.",Toast.LENGTH_LONG).show();
+
+        } else {
+            Toast.makeText(this,"Username or Password was incorrect.", Toast.LENGTH_LONG).show();
+
+        }
     }
 
     @Override
