@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "650511264224",
+    "project_id": "loot-goblin-s-reliquary",
+    "storage_bucket": "loot-goblin-s-reliquary.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650511264224:android:fcbd6cc4190ce540c2e385",
+        "android_client_info": {
+          "package_name": "com.example.shakars_character_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "650511264224-d7bplgukqh51gksad4tp3fquf67tel03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7N3q3rWiVVdyhIfUk01uc-oiQnmtWACI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "650511264224-d7bplgukqh51gksad4tp3fquf67tel03.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

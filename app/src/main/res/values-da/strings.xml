@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="username">Brugernavn</string>
     <string name="password">Kodeord</string>
     <string name="edit">Ændr</string>
     <string name="save">Gem</string>
