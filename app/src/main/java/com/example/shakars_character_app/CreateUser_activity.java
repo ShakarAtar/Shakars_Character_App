@@ -5,15 +5,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseUser;
+
 public class CreateUser_activity extends AppCompatActivity implements View.OnClickListener {
     Button done;
-    TextView title, password, username;
-    EditText passwordInput, usernameInput;
+    TextView title, password, email;
+    EditText passwordInput, emailInput;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,25 +27,34 @@ public class CreateUser_activity extends AppCompatActivity implements View.OnCli
 
         title = findViewById(R.id.createUserTitle);
         password = findViewById(R.id.createUserPasswordText);
-        username = findViewById(R.id.createUserUsernameText);
+        email = findViewById(R.id.createUserEmailText);
 
         passwordInput = findViewById(R.id.createUserPasswordEditText);
         passwordInput.setOnClickListener(this);
-        usernameInput = findViewById(R.id.createUserUsernameEditText);
-        usernameInput.setOnClickListener(this);
+        emailInput = findViewById(R.id.createUserEmailEditText);
+        emailInput.setOnClickListener(this);
+
+
 
 
 
 
     }
 
+
+
     @Override
     public void onClick(View v) {
         if (done.getId() == v.getId()) {
+
             Intent intent = new Intent(v.getContext(),Login_activity.class);
             v.getContext().startActivity(intent);
             //TODO: It should bring username and password with it
         }
+
+    }
+
+    private void updateUI(FirebaseUser user) {
 
     }
 }

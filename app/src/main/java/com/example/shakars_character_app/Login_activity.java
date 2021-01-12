@@ -21,7 +21,7 @@ public class Login_activity extends AppCompatActivity implements View.OnClickLis
     EditText usernameInput, passwordInput;
     SharedPreferences sharedPref;
     String currentTheme, sharedPreference;
-    FirebaseAuth mAuth;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
