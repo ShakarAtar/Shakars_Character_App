@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.ArrayList;
 
 public class EditCharacter_activity extends AppCompatActivity implements View.OnClickListener {
@@ -19,6 +21,7 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
     ImageButton settings;
     TextView title;
     EditText[][] editText;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

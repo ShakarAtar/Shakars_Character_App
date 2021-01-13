@@ -9,11 +9,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 public class AllCharacters_activity extends AppCompatActivity implements View.OnClickListener {
 
     Button newCharButton;
     ImageButton settings;
     TextView newCharTV, title;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

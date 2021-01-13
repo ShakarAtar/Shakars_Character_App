@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Login_activity extends AppCompatActivity implements View.OnClickListener {
 
@@ -22,6 +23,7 @@ public class Login_activity extends AppCompatActivity implements View.OnClickLis
     SharedPreferences sharedPref;
     String currentTheme, sharedPreference;
     private FirebaseAuth mAuth;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

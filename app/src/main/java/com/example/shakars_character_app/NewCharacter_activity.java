@@ -1,7 +1,9 @@
 package com.example.shakars_character_app;
 
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -12,14 +14,26 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.proto.TargetGlobal;
+
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class NewCharacter_activity extends AppCompatActivity implements View.OnClickListener {
     Button save;
     ImageButton settings;
     TextView title;
     EditText[][] editText;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+//    private FirebaseAuth mAuth;
+//    FirebaseUser currentUser = mAuth.getCurrentUser();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +98,7 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
     @Override
     public void onClick (View v){
         if (save.getId() == v.getId()) {
+            getCharacter();
             Intent intent = new Intent(v.getContext(),ViewCharacter_activity.class);
             v.getContext().startActivity(intent);
         }
@@ -154,9 +169,52 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
         String goals = editText[4][0].getText().toString();
         String backGround = editText[4][1].getText().toString();
 
+        Map<String, Object> character = new HashMap<>();
+        character.put("Name", name);
+        character.put("Title, Kenning, Moniker", title);
+        character.put("Race", race);
+        character.put("Gender", gender);
+        character.put("Age", age);
+        character.put("Nationality", nationality);
+        character.put("Hometown", hometown);
+        character.put("Continent", continent);
+        character.put("Class", rpClass);
+        character.put("Sexuality", sexuality);
+        character.put("Traits Attracted To", attracted);
+        character.put("Occupation", occupation);
+        character.put("Religion", religion);
+        character.put("Eyes", eyes);
+        character.put("Skin", skin);
+        character.put("Hair", hair);
+        character.put("Scent", scent);
+        character.put("Voice", voice);
+        character.put("Characteristic Features", features);
+        character.put("Personality", personality);
+        character.put("Behaviour and Manner", behaviour);
+        character.put("Character Traits", traits);
+        character.put("Character Flaws",flaws);
+        character.put("Quirks", quirks);
+        character.put("Hobbies", hobbies);
+        character.put("Strengths and Weaknesses", strengths);
+        character.put("Wants and Desires", wants);
+        character.put("Fears and Insecurities", fears);
+        character.put("Secrets", secrets);
+        character.put("Family", family);
+        character.put("Allies and Contacts", allies);
+        character.put("Enemies", enemies);
+        character.put("Affiliated Groups", groups);
+        character.put("Current Goals", goals);
+        character.put("Background Story", backGround);
+
+        DocumentReference newCharacterRef = db.collection("users").document("shakarAtar#0001")
+                .collection("characters").document();
+
+        newCharacterRef.set(character);
+
     }
 
-        ArrayList<View> categoriesLL = new ArrayList<>();
+
+    ArrayList<View> categoriesLL = new ArrayList<>();
 
 
 

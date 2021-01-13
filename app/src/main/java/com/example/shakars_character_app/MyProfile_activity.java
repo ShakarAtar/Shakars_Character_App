@@ -9,12 +9,15 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 public class MyProfile_activity extends AppCompatActivity implements View.OnClickListener {
 
     Button passwordButton, userNameButton;
     ImageButton settings;
     TextView title, password, username;
     EditText passwordInput, usernameInput;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
