@@ -18,6 +18,7 @@ public class EditNPC_activity extends AppCompatActivity implements View.OnClickL
     Button save;
     ImageButton settings;
     TextView title;
+    EditText[][] editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,8 @@ public class EditNPC_activity extends AppCompatActivity implements View.OnClickL
         ViewGroup content = findViewById(R.id.editNPCLayout);
         content.removeAllViews();
 
+        editText = new EditText[CategoriesAndProperties.dataPC.categoriesPC.length][];
+
         for (int catIndex = 0; catIndex < CategoriesAndProperties.dataNPC.categoriesNPC.length; catIndex++) {
             View catRoot = getLayoutInflater().inflate(R.layout.category_title,content,false);
             LinearLayout cat_title_ll = catRoot.findViewById(R.id.cat_title_ll);
@@ -48,6 +51,7 @@ public class EditNPC_activity extends AppCompatActivity implements View.OnClickL
             cat_title_ll.setVisibility(CategoriesAndProperties.foldedNPC[catIndex] ? View.GONE : View.VISIBLE);
 
             int[] props = CategoriesAndProperties.dataNPC.propertiesNPC[catIndex];
+            editText[catIndex] = new EditText[props.length];
             int[] hints = CategoriesAndProperties.dataNPC.hintsNPC[catIndex];
             for (int propIndex = 0; propIndex < props.length; propIndex++) {
 
@@ -61,6 +65,7 @@ public class EditNPC_activity extends AppCompatActivity implements View.OnClickL
                     hintIndex = 0;
                 }
                 EditText hintTV = root.findViewById(R.id.hints);
+                editText[catIndex][propIndex] = hintTV;
                 hintTV.setHint(hints[hintIndex]);
                 hintTV.setTag(hints[hintIndex]);
 

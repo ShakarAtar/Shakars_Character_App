@@ -7,7 +7,7 @@ public class CategoriesAndProperties {
 
         int[][] propertiesPC = {
                 {R.string.name, R.string.titleKenningMoniker, R.string.race, R.string.gender, R.string.age, R.string.nationality, R.string.hometown, R.string.continent, R.string.rpClass, R.string.sexuality, R.string.traitsAttracted, R.string.occupation, R.string.religion},
-                {R.string.looks, R.string.eyes, R.string.hair, R.string.scent, R.string.voice, R.string.characteristicFeatures},
+                {R.string.eyes, R.string.hair, R.string.scent, R.string.voice, R.string.characteristicFeatures},
                 {R.string.personality, R.string.behaviourAndManners, R.string.characterFlaws, R.string.quirks, R.string.hobbies, R.string.strengthsAndWeaknesses, R.string.wantsAndDesires, R.string.fearsAndInsecurities, R.string.secrets},
                 {R.string.family, R.string.alliesAndContacts,R.string.enemies, R.string.affiliatedGroups},
                 {R.string.currentGoals,R.string.backgroundStory},
@@ -28,7 +28,7 @@ public class CategoriesAndProperties {
 
         int[][] propertiesNPC = {
                 {R.string.name, R.string.titleKenningMoniker, R.string.race, R.string.gender, R.string.age, R.string.nationality, R.string.hometown, R.string.continent, R.string.rpClass, R.string.sexuality, R.string.traitsAttracted, R.string.occupation, R.string.religion},
-                {R.string.looks, R.string.eyes, R.string.hair, R.string.scent, R.string.voice, R.string.characteristicFeatures},
+                {R.string.eyes, R.string.hair, R.string.scent, R.string.voice, R.string.characteristicFeatures},
                 {R.string.personality, R.string.behaviourAndManners, R.string.characterFlaws, R.string.quirks, R.string.hobbies, R.string.strengthsAndWeaknesses, R.string.wantsAndDesires, R.string.fearsAndInsecurities, R.string.secrets},
                 {R.string.family, R.string.alliesAndContacts,R.string.enemies, R.string.affiliatedGroups},
                 {R.string.currentGoals,R.string.backgroundStory},

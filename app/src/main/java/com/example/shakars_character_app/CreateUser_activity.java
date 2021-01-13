@@ -26,13 +26,13 @@ public class CreateUser_activity extends AppCompatActivity implements View.OnCli
         done.setOnClickListener(this);
 
         title = findViewById(R.id.createUserTitle);
-        password = findViewById(R.id.createUserPasswordText);
         email = findViewById(R.id.createUserEmailText);
+        password = findViewById(R.id.createUserPasswordText);
 
-        passwordInput = findViewById(R.id.createUserPasswordEditText);
-        passwordInput.setOnClickListener(this);
         emailInput = findViewById(R.id.createUserEmailEditText);
         emailInput.setOnClickListener(this);
+        passwordInput = findViewById(R.id.createUserPasswordEditText);
+        passwordInput.setOnClickListener(this);
 
 
 

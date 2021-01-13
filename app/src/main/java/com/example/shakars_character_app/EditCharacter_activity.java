@@ -18,6 +18,7 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
     Button save;
     ImageButton settings;
     TextView title;
+    EditText[][] editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,8 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
         ViewGroup content = findViewById(R.id.editCharacterLayout);
         content.removeAllViews();
 
+        editText = new EditText[CategoriesAndProperties.dataPC.categoriesPC.length][];
+
         for (int catIndex = 0; catIndex < CategoriesAndProperties.dataPC.categoriesPC.length; catIndex++){
             View catRoot = getLayoutInflater().inflate(R.layout.category_title,content,false);
             LinearLayout cat_title_ll = catRoot.findViewById(R.id.cat_title_ll);
@@ -48,6 +51,7 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
             cat_title_ll.setVisibility(CategoriesAndProperties.foldedPC[catIndex] ? View.GONE : View.VISIBLE);
 
             int[] props = CategoriesAndProperties.dataPC.propertiesPC[catIndex];
+            editText[catIndex] = new EditText[props.length];
             int[] hints = CategoriesAndProperties.dataPC.hintsPC[catIndex];
             for (int propIndex = 0; propIndex < props.length ; propIndex++) {
 
@@ -63,6 +67,7 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
                 }
 
                 EditText hintTV = root.findViewById(R.id.hints);
+                editText[catIndex][propIndex] = hintTV;
                 hintTV.setHint(hints[hintIndex]);
                 hintTV.setTag(hintIndex);
 
