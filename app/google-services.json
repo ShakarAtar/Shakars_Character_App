@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "650511264224",
-    "project_id": "loot-goblin-s-reliquary",
-    "storage_bucket": "loot-goblin-s-reliquary.appspot.com"
+    "project_number": "291762383980",
+    "project_id": "loot-goblin-s-reliquary-41325",
+    "storage_bucket": "loot-goblin-s-reliquary-41325.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:650511264224:android:2b1a2da8cbad7a89c2e385",
+        "mobilesdk_app_id": "1:291762383980:android:b3ab042b1dd59b828bfc49",
         "android_client_info": {
           "package_name": "com.example.shakars_character_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "650511264224-d7bplgukqh51gksad4tp3fquf67tel03.apps.googleusercontent.com",
+          "client_id": "291762383980-56kmifukdkcupidt76j4aae3f7lfs48i.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB7N3q3rWiVVdyhIfUk01uc-oiQnmtWACI"
+          "current_key": "AIzaSyAgEs8flhdf6eBW2TTaHg2S_kiUiulOs84"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "650511264224-d7bplgukqh51gksad4tp3fquf67tel03.apps.googleusercontent.com",
+              "client_id": "291762383980-56kmifukdkcupidt76j4aae3f7lfs48i.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
