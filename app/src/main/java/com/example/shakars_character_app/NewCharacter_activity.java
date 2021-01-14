@@ -33,7 +33,7 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
     ImageButton settings;
     TextView title;
     EditText[][] editText;
-    FirebaseFirestore db;
+
     private static final String TAG = "NewCharacterActivity";
 
     @Override
@@ -49,7 +49,7 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
         settings = findViewById(R.id.newCharacterOverlayButton);
         settings.setOnClickListener(this);
 
-        db = FirebaseFirestore.getInstance();
+
 
         ViewGroup content = findViewById(R.id.newCharacterLayout);
         content.removeAllViews();
@@ -209,23 +209,24 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
         character.put("CurrentGoals", goals);
         character.put("BackgroundStory", backGround);
 
-        DocumentReference newCharacterRef = db.collection("users").document("shakarAtar#0001")
-                .collection("characters").document();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
 
         System.out.println("Reached GetCharacter");
 
-        newCharacterRef.set(character).addOnSuccessListener(new OnSuccessListener<Void>() {
+        db.collection("users").document("test")
+                .collection("characters").document("fuck").set(character).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
-                Log.w(TAG, "DocumentSnapshot successfully written!");
+                Log.d(TAG, "DocumentSnapshot successfully written!");
             }
         })
-        .addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Log.w(TAG, "Error writing document", e);
-            }
-        });
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG, "Error writing document", e);
+                    }
+                });
 
     }
 
