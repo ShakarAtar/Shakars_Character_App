@@ -34,8 +34,6 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
     TextView title;
     EditText[][] editText;
     FirebaseFirestore db;
-//    private FirebaseAuth mAuth;
-//    FirebaseUser currentUser = mAuth.getCurrentUser();
     private static final String TAG = "NewCharacterActivity";
 
     @Override

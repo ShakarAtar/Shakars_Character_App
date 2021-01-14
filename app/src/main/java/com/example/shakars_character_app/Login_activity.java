@@ -22,8 +22,8 @@ public class Login_activity extends AppCompatActivity implements View.OnClickLis
     EditText usernameInput, passwordInput;
     SharedPreferences sharedPref;
     String currentTheme, sharedPreference;
-    private FirebaseAuth mAuth;
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
+//    private FirebaseAuth mAuth;
+//    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +49,8 @@ public class Login_activity extends AppCompatActivity implements View.OnClickLis
         usernameInput = findViewById(R.id.loginUsernameEditText);
         passwordInput = findViewById(R.id.loginPasswordEditText);
 
-        // Initialize Firebase Auth
-        mAuth = FirebaseAuth.getInstance();
+//        // Initialize Firebase Auth
+//        mAuth = FirebaseAuth.getInstance();
 
     }
 
@@ -58,8 +58,8 @@ public class Login_activity extends AppCompatActivity implements View.OnClickLis
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
+//        FirebaseUser currentUser = mAuth.getCurrentUser();
+//        updateUI(currentUser);
     }
 
     private void updateUI(FirebaseUser currentUser) {
