@@ -12,8 +12,10 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -31,9 +33,10 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
     ImageButton settings;
     TextView title;
     EditText[][] editText;
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    FirebaseFirestore db;
 //    private FirebaseAuth mAuth;
 //    FirebaseUser currentUser = mAuth.getCurrentUser();
+    private static final String TAG = "NewCharacterActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,8 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
 
         settings = findViewById(R.id.newCharacterOverlayButton);
         settings.setOnClickListener(this);
+
+        db = FirebaseFirestore.getInstance();
 
         ViewGroup content = findViewById(R.id.newCharacterLayout);
         content.removeAllViews();
@@ -99,8 +104,8 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
     public void onClick (View v){
         if (save.getId() == v.getId()) {
             getCharacter();
-            Intent intent = new Intent(v.getContext(),ViewCharacter_activity.class);
-            v.getContext().startActivity(intent);
+//            Intent intent = new Intent(v.getContext(),ViewCharacter_activity.class);
+//            v.getContext().startActivity(intent);
         }
 
 
@@ -171,7 +176,7 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
 
         Map<String, Object> character = new HashMap<>();
         character.put("Name", name);
-        character.put("Title, Kenning, Moniker", title);
+        character.put("TitleKenningMoniker", title);
         character.put("Race", race);
         character.put("Gender", gender);
         character.put("Age", age);
@@ -180,7 +185,7 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
         character.put("Continent", continent);
         character.put("Class", rpClass);
         character.put("Sexuality", sexuality);
-        character.put("Traits Attracted To", attracted);
+        character.put("TraitsAttractedTo", attracted);
         character.put("Occupation", occupation);
         character.put("Religion", religion);
         character.put("Eyes", eyes);
@@ -188,28 +193,41 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
         character.put("Hair", hair);
         character.put("Scent", scent);
         character.put("Voice", voice);
-        character.put("Characteristic Features", features);
+        character.put("CharacteristicFeatures", features);
         character.put("Personality", personality);
-        character.put("Behaviour and Manner", behaviour);
-        character.put("Character Traits", traits);
-        character.put("Character Flaws",flaws);
+        character.put("BehaviourAndManner", behaviour);
+        character.put("CharacterTraits", traits);
+        character.put("CharacterFlaws",flaws);
         character.put("Quirks", quirks);
         character.put("Hobbies", hobbies);
-        character.put("Strengths and Weaknesses", strengths);
-        character.put("Wants and Desires", wants);
-        character.put("Fears and Insecurities", fears);
+        character.put("StrengthsAndWeaknesses", strengths);
+        character.put("WantsAndDesires", wants);
+        character.put("FearsAndInsecurities", fears);
         character.put("Secrets", secrets);
         character.put("Family", family);
-        character.put("Allies and Contacts", allies);
+        character.put("AlliesAndContacts", allies);
         character.put("Enemies", enemies);
-        character.put("Affiliated Groups", groups);
-        character.put("Current Goals", goals);
-        character.put("Background Story", backGround);
+        character.put("AffiliatedGroups", groups);
+        character.put("CurrentGoals", goals);
+        character.put("BackgroundStory", backGround);
 
         DocumentReference newCharacterRef = db.collection("users").document("shakarAtar#0001")
                 .collection("characters").document();
 
-        newCharacterRef.set(character);
+        System.out.println("Reached GetCharacter");
+
+        newCharacterRef.set(character).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                Log.w(TAG, "DocumentSnapshot successfully written!");
+            }
+        })
+        .addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.w(TAG, "Error writing document", e);
+            }
+        });
 
     }
 
