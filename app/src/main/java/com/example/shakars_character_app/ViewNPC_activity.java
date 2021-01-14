@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -20,6 +21,8 @@ public class ViewNPC_activity extends AppCompatActivity implements View.OnClickL
     ImageButton settings;
     TextView title;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +80,7 @@ public class ViewNPC_activity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         if (edit.getId() == v.getId()) {
+            v.startAnimation(buttonClick);
             Intent intent = new Intent(v.getContext(),EditNPC_activity.class);
             v.getContext().startActivity(intent);
         }

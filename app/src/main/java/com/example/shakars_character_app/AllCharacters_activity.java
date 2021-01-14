@@ -3,6 +3,7 @@ package com.example.shakars_character_app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -17,6 +18,8 @@ public class AllCharacters_activity extends AppCompatActivity implements View.On
     ImageButton settings;
     TextView newCharTV, title;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,7 @@ public class AllCharacters_activity extends AppCompatActivity implements View.On
     @Override
     public void onClick(View v) {
         if (newCharButton.getId() == v.getId() || newCharTV.getId() == v.getId()) {
+            v.startAnimation(buttonClick);
             Intent intent = new Intent(v.getContext(), NewCharacter_activity.class);
             v.getContext().startActivity(intent);
 

@@ -2,6 +2,7 @@ package com.example.shakars_character_app;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -14,6 +15,8 @@ public class AllNotes_activity extends AppCompatActivity implements View.OnClick
     ImageButton settings;
     TextView title;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

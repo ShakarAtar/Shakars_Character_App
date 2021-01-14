@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -27,6 +28,7 @@ public class FrontPage_activity extends AppCompatActivity implements View.OnClic
     TextView title, charactersTVClick, npcsTVClick, notesTVClick;
     private static final String TAG = "FrontPage";
     FirebaseFirestore db;
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,18 +133,22 @@ public class FrontPage_activity extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View v) {
         if (characters.getId() == v.getId() || charactersTVClick.getId() == v.getId()) {
+            v.startAnimation(buttonClick);
             Intent intent = new Intent(v.getContext(), AllCharacters_activity.class);
             v.getContext().startActivity(intent);
 
         } else if (npcs.getId() == v.getId() || npcsTVClick.getId() == v.getId()) {
+            v.startAnimation(buttonClick);
             Intent intent = new Intent(v.getContext(), AllNPCS_activity.class);
             v.getContext().startActivity(intent);
 
         } else if (notes.getId() == v.getId() || notesTVClick.getId() == v.getId()) {
+            v.startAnimation(buttonClick);
             Intent intent = new Intent(v.getContext(),AllNotes_activity.class);
             v.getContext().startActivity(intent);
 
         } else if (settings.getId() == v.getId()) {
+            v.startAnimation(buttonClick);
             Intent intent = new Intent(v.getContext(),Setting_activity.class);
             v.getContext().startActivity(intent);
         }

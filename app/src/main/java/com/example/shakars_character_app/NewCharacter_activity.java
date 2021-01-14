@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -35,6 +36,8 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
     EditText[][] editText;
 
     private static final String TAG = "NewCharacterActivity";
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,6 +104,7 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
     @Override
     public void onClick (View v){
         if (save.getId() == v.getId()) {
+            v.startAnimation(buttonClick);
             getCharacter();
 //            Intent intent = new Intent(v.getContext(),ViewCharacter_activity.class);
 //            v.getContext().startActivity(intent);

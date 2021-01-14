@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -24,6 +25,7 @@ public class Login_activity extends AppCompatActivity implements View.OnClickLis
     String currentTheme, sharedPreference;
 //    private FirebaseAuth mAuth;
 //    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,11 +77,13 @@ public class Login_activity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         if (login.getId() == v.getId()) {
+            v.startAnimation(buttonClick);
             Intent intent = new Intent(v.getContext(),FrontPage_activity.class);
             v.getContext().startActivity(intent);
             //TODO: Only if a correct user has been inputted
 
         } else if (createUser.getId() == v.getId()){
+            v.startAnimation(buttonClick);
             Intent intent = new Intent(v.getContext(),CreateUser_activity.class);
             v.getContext().startActivity(intent);
         }
