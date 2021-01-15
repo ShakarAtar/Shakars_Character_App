@@ -1,7 +1,6 @@
 package com.example.shakars_character_app;
 
 import android.content.Intent;
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,14 +17,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.proto.TargetGlobal;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -106,7 +101,7 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
     public void onClick (View v){
         if (save.getId() == v.getId()) {
             v.startAnimation(buttonClick);
-            getCharacter();
+            sendCharacter();
             Intent intent = new Intent(v.getContext(),ViewCharacter_activity.class);
             intent.putExtra("DocumentID", documentID);
             v.getContext().startActivity(intent);
@@ -135,8 +130,10 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
 
     }
 
+    ArrayList<View> categoriesLL = new ArrayList<>();
 
-    private void getCharacter () {
+
+    private void sendCharacter() {
         //Basic
         String name = editText[0][0].getText().toString();
         String title = editText[0][1].getText().toString();
@@ -179,8 +176,6 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
         String backGround = editText[4][1].getText().toString();
 
         documentID = name;
-        System.out.println("DocumentId is: " + documentID);
-        System.out.println("Name is: " + name);
 
         Map<String, Object> character = new HashMap<>();
         character.put("Name", name);
@@ -242,8 +237,6 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
 
     }
 
-
-    ArrayList<View> categoriesLL = new ArrayList<>();
 
 
 

@@ -27,7 +27,6 @@ public class ViewCharacter_activity extends AppCompatActivity implements View.On
     ImageButton settings;
     TextView title;
     TextView[][] viewText;
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
     String documentID;
     private static final String TAG = "ViewCharacterActivity";
@@ -40,7 +39,8 @@ public class ViewCharacter_activity extends AppCompatActivity implements View.On
         setContentView(R.layout.view_character);
         Intent intent = getIntent();
         documentID = intent.getStringExtra("DocumentID");
-        characterRef = FirebaseFirestore.getInstance().collection("users").document("test")
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        characterRef = db.collection("users").document("test")
                 .collection("characters").document(documentID);
 
         title = findViewById(R.id.viewCharacterTitle);
@@ -102,6 +102,7 @@ public class ViewCharacter_activity extends AppCompatActivity implements View.On
         if (edit.getId() == v.getId()) {
             v.startAnimation(buttonClick);
             Intent intent = new Intent(v.getContext(),EditCharacter_activity.class);
+            intent.putExtra("DocumentID", documentID);
             v.getContext().startActivity(intent);
         }
 
