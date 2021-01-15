@@ -42,7 +42,7 @@ public class EditNPC_activity extends AppCompatActivity implements View.OnClickL
         ViewGroup content = findViewById(R.id.editNPCLayout);
         content.removeAllViews();
 
-        editText = new EditText[CategoriesAndProperties.dataPC.categoriesPC.length][];
+        editText = new EditText[CategoriesAndProperties.dataNPC.categoriesNPC.length][];
 
         for (int catIndex = 0; catIndex < CategoriesAndProperties.dataNPC.categoriesNPC.length; catIndex++) {
             View catRoot = getLayoutInflater().inflate(R.layout.category_title,content,false);

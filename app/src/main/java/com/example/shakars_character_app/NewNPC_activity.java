@@ -2,6 +2,7 @@ package com.example.shakars_character_app;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
@@ -11,19 +12,27 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class NewNPC_activity extends AppCompatActivity implements View.OnClickListener {
     Button save;
     ImageButton settings;
     TextView title;
     EditText[][] editText;
+    String documentID;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
+    private static final String TAG = "NewNPCActivity";
 
 
     @Override
@@ -42,7 +51,7 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
         ViewGroup content = findViewById(R.id.newNPCLayout);
         content.removeAllViews();
 
-        editText = new EditText[CategoriesAndProperties.dataPC.categoriesPC.length][];
+        editText = new EditText[CategoriesAndProperties.dataNPC.categoriesNPC.length][];
 
         for (int catIndex = 0; catIndex < CategoriesAndProperties.dataNPC.categoriesNPC.length; catIndex++) {
             View catRoot = getLayoutInflater().inflate(R.layout.category_title,content,false);
@@ -87,7 +96,9 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         if (save.getId() == v.getId()) {
             v.startAnimation(buttonClick);
+            getNPC();
             Intent intent = new Intent(v.getContext(),ViewNPC_activity.class);
+            intent.putExtra("Document_ID", documentID );
             v.getContext().startActivity(intent);
         }
 
@@ -157,6 +168,72 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
         String hooks = editText[5][2].getText().toString();
         String plot = editText[5][3].getText().toString();
         String motivations = editText[5][4].getText().toString();
+
+        documentID = name;
+
+        Map<String, Object> npc = new HashMap<>();
+        npc.put("Name", name);
+        npc.put("TitleKenningMoniker", title);
+        npc.put("Race", race);
+        npc.put("Gender", gender);
+        npc.put("Age", age);
+        npc.put("Nationality", nationality);
+        npc.put("Hometown", hometown);
+        npc.put("Continent", continent);
+        npc.put("Class", rpClass);
+        npc.put("Sexuality", sexuality);
+        npc.put("TraitsAttractedTo", attracted);
+        npc.put("Occupation", occupation);
+        npc.put("Religion", religion);
+        npc.put("Eyes", eyes);
+        npc.put("Skin", skin);
+        npc.put("Hair", hair);
+        npc.put("Scent", scent);
+        npc.put("Voice", voice);
+        npc.put("CharacteristicFeatures", features);
+        npc.put("Personality", personality);
+        npc.put("BehaviourAndManner", behaviour);
+        npc.put("CharacterTraits", traits);
+        npc.put("CharacterFlaws",flaws);
+        npc.put("Quirks", quirks);
+        npc.put("Hobbies", hobbies);
+        npc.put("StrengthsAndWeaknesses", strengths);
+        npc.put("WantsAndDesires", wants);
+        npc.put("FearsAndInsecurities", fears);
+        npc.put("Secrets", secrets);
+        npc.put("Family", family);
+        npc.put("AlliesAndContacts", allies);
+        npc.put("Enemies", enemies);
+        npc.put("AffiliatedGroups", groups);
+        npc.put("CurrentGoals", goals);
+        npc.put("BackgroundStory", backGround);
+        npc.put("SpecialAbilities", abilities);
+        npc.put("PartOfTheWorld", part);
+        npc.put("HooksToPlayers", hooks);
+        npc.put("PlotHooks", plot);
+        npc.put("Motivations", motivations);
+
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+
+
+        DocumentReference newCharacterRef = db.collection("users").document("test")
+                .collection("npcs").document(name);
+
+
+        newCharacterRef.set(npc).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                Log.d(TAG, "DocumentSnapshot successfully written!");
+            }
+        })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG, "Error writing document", e);
+                    }
+                });
 
     }
 

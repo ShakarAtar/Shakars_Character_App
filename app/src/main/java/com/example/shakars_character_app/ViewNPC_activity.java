@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -20,6 +21,7 @@ public class ViewNPC_activity extends AppCompatActivity implements View.OnClickL
     Button edit;
     ImageButton settings;
     TextView title;
+    TextView[][] viewText;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
 
@@ -40,6 +42,8 @@ public class ViewNPC_activity extends AppCompatActivity implements View.OnClickL
         ViewGroup content = findViewById(R.id.viewNPCLayout);
         content.removeAllViews();
 
+        viewText = new TextView[CategoriesAndProperties.dataNPC.categoriesNPC.length][];
+
         for (int catIndex = 0; catIndex < CategoriesAndProperties.dataNPC.categoriesNPC.length; catIndex++) {
             View catRoot = getLayoutInflater().inflate(R.layout.category_title_view,content,false);
             LinearLayout cat_title_ll = catRoot.findViewById(R.id.cat_title_ll_view);
@@ -53,6 +57,7 @@ public class ViewNPC_activity extends AppCompatActivity implements View.OnClickL
             cat_title_ll.setVisibility(CategoriesAndProperties.foldedNPC[catIndex] ? View.GONE : View.VISIBLE);
 
             int[] props = CategoriesAndProperties.dataNPC.propertiesNPC[catIndex];
+            viewText[catIndex] = new EditText[props.length];
             int[] hints = CategoriesAndProperties.dataNPC.hintsNPC[catIndex];
             for (int propIndex = 0; propIndex < props.length; propIndex++) {
 
@@ -66,6 +71,7 @@ public class ViewNPC_activity extends AppCompatActivity implements View.OnClickL
                     hintIndex = 0;
                 }
                 TextView hintTV = root.findViewById(R.id.viewHints);
+                viewText[catIndex][propIndex] = hintTV;
                 hintTV.setHint(hints[hintIndex]);
                 hintTV.setTag(hintIndex);
 
