@@ -32,7 +32,6 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
     ImageButton settings;
     TextView title;
     EditText[][] editText;
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
     String documentID;
     private static final String TAG = "ViewCharacterActivity";
@@ -99,7 +98,7 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
                 cat_title_ll.addView(root);
             }
 
-            getCharacter();
+//            getCharacter();
 
         }
 

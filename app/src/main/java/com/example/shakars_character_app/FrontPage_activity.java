@@ -27,7 +27,6 @@ public class FrontPage_activity extends AppCompatActivity implements View.OnClic
     ImageButton characters, npcs, notes, settings;
     TextView title, charactersTVClick, npcsTVClick, notesTVClick;
     private static final String TAG = "FrontPage";
-    FirebaseFirestore db;
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
 
     @Override

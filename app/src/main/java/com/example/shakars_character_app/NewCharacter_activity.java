@@ -1,7 +1,9 @@
 package com.example.shakars_character_app;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +13,10 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -102,9 +106,31 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
         if (save.getId() == v.getId()) {
             v.startAnimation(buttonClick);
             sendCharacter();
-            Intent intent = new Intent(v.getContext(),ViewCharacter_activity.class);
-            intent.putExtra("DocumentID", documentID);
-            v.getContext().startActivity(intent);
+            if (TextUtils.equals(documentID,"")) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("End character creation.");
+                builder.setMessage("You are about to end character creation.\nThe character cannot be saved without a name.\nYou will be sent back to the front page.\nAre you sur you want to finish?");
+                builder.setCancelable(true);
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(NewCharacter_activity.this, FrontPage_activity.class));
+                    }
+                });
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                builder.show();
+            } else {
+                Intent intent = new Intent(v.getContext(), ViewCharacter_activity.class);
+                intent.putExtra("DocumentID", documentID);
+                v.getContext().startActivity(intent);
+
+            }
+
         }
 
 
@@ -136,6 +162,7 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
     private void sendCharacter() {
         //Basic
         String name = editText[0][0].getText().toString();
+        System.out.println("Name equals: " + name + ".");
         String title = editText[0][1].getText().toString();
         String race = editText[0][2].getText().toString();
         String gender = editText[0][3].getText().toString();
@@ -216,24 +243,32 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
+        if (TextUtils.isEmpty(name)) {
+            editText[0][0].setError("This cannot be empty");
+            return;
+        }
+
+         else {
+
+            DocumentReference newCharacterRef = db.collection("users").document("test")
+                    .collection("characters").document(name);
 
 
-        DocumentReference newCharacterRef = db.collection("users").document("test")
-                .collection("characters").document(name);
+            newCharacterRef.set(character).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    Log.d(TAG, "DocumentSnapshot successfully written!");
+                }
+            })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.w(TAG, "Error writing document", e);
+                        }
+                    });
+        }
 
 
-                newCharacterRef.set(character).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                Log.d(TAG, "DocumentSnapshot successfully written!");
-            }
-        })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w(TAG, "Error writing document", e);
-                    }
-                });
 
     }
 
