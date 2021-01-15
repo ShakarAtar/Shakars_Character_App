@@ -108,7 +108,7 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
             v.startAnimation(buttonClick);
             getCharacter();
             Intent intent = new Intent(v.getContext(),ViewCharacter_activity.class);
-            intent.putExtra("Document_ID", documentID );
+            intent.putExtra("DocumentID", documentID);
             v.getContext().startActivity(intent);
         }
 
@@ -179,6 +179,8 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
         String backGround = editText[4][1].getText().toString();
 
         documentID = name;
+        System.out.println("DocumentId is: " + documentID);
+        System.out.println("Name is: " + name);
 
         Map<String, Object> character = new HashMap<>();
         character.put("Name", name);
