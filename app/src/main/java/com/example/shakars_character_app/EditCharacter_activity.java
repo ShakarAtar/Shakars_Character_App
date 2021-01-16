@@ -1,7 +1,9 @@
 package com.example.shakars_character_app;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -98,7 +101,7 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
                 cat_title_ll.addView(root);
             }
 
-//            getCharacter();
+            getCharacter();
 
         }
 
@@ -109,8 +112,30 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
         if (save.getId() == v.getId()) {
             v.startAnimation(buttonClick);
             sendCharacter();
-            Intent intent = new Intent(v.getContext(), ViewCharacter_activity.class);
-            v.getContext().startActivity(intent);
+            if (TextUtils.equals(documentID,"")) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("End character creation.");
+                builder.setMessage("You are about to end character editing.\nThe character cannot be saved without a name.\nYou will be sent back to the front page.\nAre you sure you want to finish?");
+                builder.setCancelable(true);
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(EditCharacter_activity.this, AllCharacters_activity.class));
+                    }
+                });
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                builder.show();
+            } else {
+                Intent intent = new Intent(v.getContext(), ViewCharacter_activity.class);
+                intent.putExtra("DocumentID", documentID);
+                v.getContext().startActivity(intent);
+
+            }
         }
 
         Object tag = v.getTag();

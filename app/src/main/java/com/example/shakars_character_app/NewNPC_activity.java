@@ -1,7 +1,9 @@
 package com.example.shakars_character_app;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -30,7 +33,6 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
     TextView title;
     EditText[][] editText;
     String documentID;
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
     private static final String TAG = "NewNPCActivity";
 
@@ -96,10 +98,31 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         if (save.getId() == v.getId()) {
             v.startAnimation(buttonClick);
-            getNPC();
-            Intent intent = new Intent(v.getContext(),ViewNPC_activity.class);
-            intent.putExtra("Document_ID", documentID );
-            v.getContext().startActivity(intent);
+            sendNPC();
+            if (TextUtils.equals(documentID,"")) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("End character creation.");
+                builder.setMessage("You are about to end character creation.\nThe character cannot be saved without a name.\nYou will be sent back to the front page.\nAre you sure you want to finish?");
+                builder.setCancelable(true);
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(NewNPC_activity.this, AllNPCS_activity.class));
+                    }
+                });
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                builder.show();
+            } else {
+                Intent intent = new Intent(v.getContext(), ViewCharacter_activity.class);
+                intent.putExtra("DocumentID", documentID);
+                v.getContext().startActivity(intent);
+
+            }
         }
 
         Object tag = v.getTag();
@@ -121,7 +144,9 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
 
     }
 
-    private void getNPC () {
+    ArrayList<View> categoriesLL = new ArrayList<>();
+
+    private void sendNPC() {
         //Basic
         String name = editText[0][0].getText().toString();
         String title = editText[0][1].getText().toString();
@@ -216,6 +241,11 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
+        if (TextUtils.isEmpty(name)) {
+            editText[0][0].setError("This cannot be empty");
+            return;
+        }
+
 
 
         DocumentReference newCharacterRef = db.collection("users").document("test")
@@ -236,8 +266,6 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
                 });
 
     }
-
-    ArrayList<View> categoriesLL = new ArrayList<>();
 
 
 }

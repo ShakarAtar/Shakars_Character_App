@@ -109,12 +109,12 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
             if (TextUtils.equals(documentID,"")) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("End character creation.");
-                builder.setMessage("You are about to end character creation.\nThe character cannot be saved without a name.\nYou will be sent back to the front page.\nAre you sur you want to finish?");
+                builder.setMessage("You are about to end character creation.\nThe character cannot be saved without a name.\nYou will be sent back to the front page.\nAre you sure you want to finish?");
                 builder.setCancelable(true);
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        startActivity(new Intent(NewCharacter_activity.this, FrontPage_activity.class));
+                        startActivity(new Intent(NewCharacter_activity.this, AllCharacters_activity.class));
                     }
                 });
                 builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -162,7 +162,6 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
     private void sendCharacter() {
         //Basic
         String name = editText[0][0].getText().toString();
-        System.out.println("Name equals: " + name + ".");
         String title = editText[0][1].getText().toString();
         String race = editText[0][2].getText().toString();
         String gender = editText[0][3].getText().toString();
@@ -245,7 +244,7 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
 
         if (TextUtils.isEmpty(name)) {
             editText[0][0].setError("This cannot be empty");
-            return;
+
         }
 
          else {
