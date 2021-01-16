@@ -17,14 +17,7 @@
         app:layout_constraintTop_toBottomOf="@+id/NPCListCreateNewNPCTV"
         tools:layout_editor_absoluteX="1dp">
 
-        <LinearLayout
-            android:id="@+id/NPCListLL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <include layout="@layout/npc_list_entries" />
-        </LinearLayout>
+        <include layout="@layout/npc_list_entries" />
     </ScrollView>
 
     <ImageButton

@@ -17,13 +17,17 @@
         tools:layout_editor_absoluteX="1dp">
 
         <LinearLayout
-            android:id="@+id/characterListLL"
+            android:id="@+id/characterListVG"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
-            <include layout="@layout/character_list_entries" />
+            <include layout="@layout/charater_list_entries"/>
         </LinearLayout>
+
+
+
+
     </ScrollView>
 
     <ImageButton

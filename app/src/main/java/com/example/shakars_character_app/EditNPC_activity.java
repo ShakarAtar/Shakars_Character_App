@@ -61,7 +61,8 @@ public class EditNPC_activity extends AppCompatActivity implements View.OnClickL
         save.setOnClickListener(this);
 
         settings = findViewById(R.id.editNPCOverlayButton);
-        settings.setOnClickListener(this);
+        //        settings.setOnClickListener(this);
+        settings.setVisibility(View.INVISIBLE);
 
         loading = findViewById(R.id.editNPCLoadAnimation);
         loading.setVisibility(View.INVISIBLE);

@@ -30,7 +30,8 @@ public class AllNPCS_activity extends AppCompatActivity implements View.OnClickL
         newNPCButton.setOnClickListener(this);
 
         settings = findViewById(R.id.NPCListOverlayButton);
-        settings.setOnClickListener(this);
+        //        settings.setOnClickListener(this);
+        settings.setVisibility(View.INVISIBLE);
 
         newNPCTV = findViewById(R.id.NPCListCreateNewNPCTV);
         newNPCTV.setOnClickListener(this);

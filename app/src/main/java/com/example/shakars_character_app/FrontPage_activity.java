@@ -47,7 +47,8 @@ public class FrontPage_activity extends AppCompatActivity implements View.OnClic
         notes.setVisibility(View.INVISIBLE);
 
         settings = findViewById(R.id.frontPageOverlayButton);
-        settings.setOnClickListener(this);
+//        settings.setOnClickListener(this);
+        settings.setVisibility(View.INVISIBLE);
 
         charactersTVClick = findViewById(R.id.frontPageCharactersText);
         charactersTVClick.setOnClickListener(this);
