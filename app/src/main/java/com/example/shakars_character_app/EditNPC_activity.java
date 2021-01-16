@@ -3,6 +3,7 @@ package com.example.shakars_character_app;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -18,6 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -39,6 +41,7 @@ public class EditNPC_activity extends AppCompatActivity implements View.OnClickL
     String documentID;
     private static final String TAG = "EditNPCActivity";
     DocumentReference npcRef;
+    LottieAnimationView loading;
 
 
     @Override
@@ -59,6 +62,11 @@ public class EditNPC_activity extends AppCompatActivity implements View.OnClickL
 
         settings = findViewById(R.id.editNPCOverlayButton);
         settings.setOnClickListener(this);
+
+        loading = findViewById(R.id.editNPCLoadAnimation);
+        loading.setVisibility(View.INVISIBLE);
+
+
 
         ViewGroup content = findViewById(R.id.editNPCLayout);
         content.removeAllViews();
@@ -109,7 +117,7 @@ public class EditNPC_activity extends AppCompatActivity implements View.OnClickL
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(final View v) {
         if (save.getId() == v.getId()) {
             v.startAnimation(buttonClick);
             sendNPC();
@@ -132,9 +140,24 @@ public class EditNPC_activity extends AppCompatActivity implements View.OnClickL
                 });
                 builder.show();
             } else {
-                Intent intent = new Intent(v.getContext(),ViewNPC_activity.class);
-                intent.putExtra("DocumentID", documentID);
-                v.getContext().startActivity(intent);
+                loading.setVisibility(View.VISIBLE);
+                loading.playAnimation();
+                ViewGroup content = findViewById(R.id.editNPCLayout);
+                content.setVisibility(View.INVISIBLE);
+                new CountDownTimer(3000, 1000) {
+                    @Override
+                    public void onTick(long millisUntilFinished) {
+
+                    }
+
+                    @Override
+                    public void onFinish() {
+                        Intent intent = new Intent(v.getContext(), ViewNPC_activity.class);
+                        intent.putExtra("DocumentID", documentID);
+                        v.getContext().startActivity(intent);
+
+                    }
+                }.start();
 
             }
         }

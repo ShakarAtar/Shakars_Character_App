@@ -3,6 +3,8 @@ package com.example.shakars_character_app;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -37,7 +39,6 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
     private static final String TAG = "NewNPCActivity";
     LottieAnimationView loading;
-    Boolean isFinished = false;
 
 
     @Override
@@ -54,6 +55,10 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
         settings.setOnClickListener(this);
 
         loading = findViewById(R.id.newNPCLoadAnimation);
+        loading.setVisibility(View.INVISIBLE);
+
+
+
 
         ViewGroup content = findViewById(R.id.newNPCLayout);
         content.removeAllViews();
@@ -100,7 +105,7 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(final View v) {
         if (save.getId() == v.getId()) {
             v.startAnimation(buttonClick);
             sendNPC();
@@ -123,13 +128,26 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
                 });
                 builder.show();
             } else {
+                loading.setVisibility(View.VISIBLE);
                 loading.playAnimation();
-                if (isFinished) {
-                    Intent intent = new Intent(v.getContext(), ViewCharacter_activity.class);
-                    intent.putExtra("DocumentID", documentID);
-                    v.getContext().startActivity(intent);
+                ViewGroup content = findViewById(R.id.newNPCLayout);
+                content.setVisibility(View.INVISIBLE);
+                new CountDownTimer(3000, 1000) {
+                    @Override
+                    public void onTick(long millisUntilFinished) {
 
-                }
+                    }
+
+                    @Override
+                    public void onFinish() {
+                        Intent intent = new Intent(v.getContext(), ViewNPC_activity.class);
+                        intent.putExtra("DocumentID", documentID);
+                        v.getContext().startActivity(intent);
+
+                    }
+                }.start();
+
+
 
             }
         }
@@ -152,6 +170,8 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
         }
 
     }
+
+
 
     ArrayList<View> categoriesLL = new ArrayList<>();
 
@@ -274,7 +294,7 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
                     }
                 });
 
-        isFinished = true;
+
 
     }
 

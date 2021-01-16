@@ -23,8 +23,6 @@ public class Login_activity extends AppCompatActivity implements View.OnClickLis
     EditText usernameInput, passwordInput;
     SharedPreferences sharedPref;
     String currentTheme, sharedPreference;
-//    private FirebaseAuth mAuth;
-//    FirebaseFirestore db = FirebaseFirestore.getInstance();
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
 
     @Override
@@ -38,7 +36,8 @@ public class Login_activity extends AppCompatActivity implements View.OnClickLis
         login = findViewById(R.id.loginButton);
         login.setOnClickListener(this);
         createUser = findViewById(R.id.loginCreateUser);
-        createUser.setOnClickListener(this);
+//        createUser.setOnClickListener(this);
+        createUser.setVisibility(View.INVISIBLE);
 
         //Text Fields
         title = findViewById(R.id.loginAppTitle);
@@ -51,8 +50,7 @@ public class Login_activity extends AppCompatActivity implements View.OnClickLis
         usernameInput = findViewById(R.id.loginUsernameEditText);
         passwordInput = findViewById(R.id.loginPasswordEditText);
 
-//        // Initialize Firebase Auth
-//        mAuth = FirebaseAuth.getInstance();
+
 
     }
 

@@ -3,6 +3,7 @@ package com.example.shakars_character_app;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -18,6 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -39,6 +41,7 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
     String documentID;
     private static final String TAG = "EditCharacterActivity";
     DocumentReference characterRef;
+    LottieAnimationView loading;
 
 
     @Override
@@ -59,6 +62,9 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
 
         settings = findViewById(R.id.editOverlayButton);
         settings.setOnClickListener(this);
+
+        loading = findViewById(R.id.editCharacterLoadAnimation);
+        loading.setVisibility(View.INVISIBLE);
 
         ViewGroup content = findViewById(R.id.editCharacterLayout);
         content.removeAllViews();
@@ -109,7 +115,7 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(final View v) {
         if (save.getId() == v.getId()) {
             v.startAnimation(buttonClick);
             sendCharacter();
@@ -132,9 +138,25 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
                 });
                 builder.show();
             } else {
-                Intent intent = new Intent(v.getContext(), ViewCharacter_activity.class);
-                intent.putExtra("DocumentID", documentID);
-                v.getContext().startActivity(intent);
+                loading.playAnimation();
+                loading.setVisibility(View.VISIBLE);
+                ViewGroup content = findViewById(R.id.newCharacterLayout);
+                content.setVisibility(View.INVISIBLE);
+
+                new CountDownTimer(3000, 1000) {
+                    @Override
+                    public void onTick(long millisUntilFinished) {
+
+                    }
+
+                    @Override
+                    public void onFinish() {
+                        Intent intent = new Intent(v.getContext(), ViewCharacter_activity.class);
+                        intent.putExtra("DocumentID", documentID);
+                        v.getContext().startActivity(intent);
+
+                    }
+                }.start();
 
             }
         }
