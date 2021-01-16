@@ -18,6 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
@@ -35,6 +36,8 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
     String documentID;
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
     private static final String TAG = "NewNPCActivity";
+    LottieAnimationView loading;
+    Boolean isFinished = false;
 
 
     @Override
@@ -49,6 +52,8 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
 
         settings = findViewById(R.id.newNPCOverlayButton);
         settings.setOnClickListener(this);
+
+        loading.findViewById(R.id.newNPCLoadAnimation);
 
         ViewGroup content = findViewById(R.id.newNPCLayout);
         content.removeAllViews();
@@ -118,9 +123,13 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
                 });
                 builder.show();
             } else {
-                Intent intent = new Intent(v.getContext(), ViewCharacter_activity.class);
-                intent.putExtra("DocumentID", documentID);
-                v.getContext().startActivity(intent);
+                loading.playAnimation();
+                if (isFinished) {
+                    Intent intent = new Intent(v.getContext(), ViewCharacter_activity.class);
+                    intent.putExtra("DocumentID", documentID);
+                    v.getContext().startActivity(intent);
+
+                }
 
             }
         }
@@ -264,6 +273,8 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
                         Log.w(TAG, "Error writing document", e);
                     }
                 });
+
+        isFinished = true;
 
     }
 

@@ -36,6 +36,8 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
     TextView title;
     EditText[][] editText;
     String documentID;
+    LottieAnimationView loading;
+    Boolean isFinished = false;
 
     private static final String TAG = "NewCharacterActivity";
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
@@ -53,6 +55,8 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
 
         settings = findViewById(R.id.newCharacterOverlayButton);
         settings.setOnClickListener(this);
+
+        loading.findViewById(R.id.newCharacterLoadAnimation);
 
 
 
@@ -127,9 +131,13 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
                 });
                 builder.show();
             } else {
-                Intent intent = new Intent(v.getContext(), ViewCharacter_activity.class);
-                intent.putExtra("DocumentID", documentID);
-                v.getContext().startActivity(intent);
+                loading.playAnimation();
+                if (isFinished) {
+                    Intent intent = new Intent(v.getContext(), ViewCharacter_activity.class);
+                    intent.putExtra("DocumentID", documentID);
+                    v.getContext().startActivity(intent);
+
+                }
 
             }
 
@@ -159,6 +167,7 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
     }
 
     ArrayList<View> categoriesLL = new ArrayList<>();
+
 
 
 
@@ -271,6 +280,8 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
                         }
                     });
         }
+
+         isFinished = true;
 
 
 
