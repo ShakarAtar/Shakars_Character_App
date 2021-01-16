@@ -53,7 +53,7 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
         settings = findViewById(R.id.newNPCOverlayButton);
         settings.setOnClickListener(this);
 
-        loading.findViewById(R.id.newNPCLoadAnimation);
+        loading = findViewById(R.id.newNPCLoadAnimation);
 
         ViewGroup content = findViewById(R.id.newNPCLayout);
         content.removeAllViews();

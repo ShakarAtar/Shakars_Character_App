@@ -56,7 +56,7 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
         settings = findViewById(R.id.newCharacterOverlayButton);
         settings.setOnClickListener(this);
 
-        loading.findViewById(R.id.newCharacterLoadAnimation);
+        loading = findViewById(R.id.newCharacterLoadAnimation);
 
 
 
