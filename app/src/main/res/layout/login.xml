@@ -33,13 +33,15 @@
         android:background="?attr/overlayColour"
         android:hint="@string/email"
         android:inputType="text"
-        android:textSize="21sp"
         android:textColor="?attr/textColour"
         android:textColorHint="?attr/textColour"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPageUsernameText" />
+        app:layout_constraintTop_toBottomOf="@+id/loginPageUsernameText"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/loginPageUsernameText"
@@ -51,7 +53,7 @@
         android:textColor="?attr/textColour"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintHorizontal_bias="0.312"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginAppTitle" />
 
@@ -110,28 +112,29 @@
         android:background="?attr/buttonColour"
         android:fontFamily="sans-serif-medium"
         android:text="@string/login"
-        android:textSize="16sp"
         android:textColor="?attr/textColour"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/loginCreateUser"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginPasswordEditText"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintVertical_bias="0.712" />
 
     <Button
         android:id="@+id/loginCreateUser"
         android:layout_width="156dp"
         android:layout_height="25dp"
-        android:layout_marginBottom="32dp"
         android:background="?attr/overlayColour"
         android:text="@string/createUser"
-        android:textSize="14sp"
         android:textColor="?attr/textColour"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.903" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

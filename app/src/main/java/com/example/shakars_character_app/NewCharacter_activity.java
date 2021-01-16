@@ -19,8 +19,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.common.base.Function;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -157,6 +159,9 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
     }
 
     ArrayList<View> categoriesLL = new ArrayList<>();
+
+
+
 
 
     private void sendCharacter() {
