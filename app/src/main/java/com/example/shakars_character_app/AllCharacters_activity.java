@@ -17,7 +17,6 @@ public class AllCharacters_activity extends AppCompatActivity implements View.On
     Button newCharButton;
     ImageButton settings;
     TextView newCharTV, title;
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
 
 

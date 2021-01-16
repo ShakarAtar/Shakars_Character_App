@@ -37,7 +37,7 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
     EditText[][] editText;
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
     String documentID;
-    private static final String TAG = "ViewCharacterActivity";
+    private static final String TAG = "EditCharacterActivity";
     DocumentReference characterRef;
 
 
@@ -96,7 +96,7 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
                 EditText hintTV = root.findViewById(R.id.hints);
                 editText[catIndex][propIndex] = hintTV;
                 hintTV.setHint(hints[hintIndex]);
-                hintTV.setTag(hintIndex);
+                hintTV.setTag(hints[hintIndex]);
 
                 cat_title_ll.addView(root);
             }
@@ -104,6 +104,7 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
             getCharacter();
 
         }
+
 
     }
 
@@ -383,6 +384,11 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
         character.put("BackgroundStory", backGround);
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        if (TextUtils.isEmpty(name)) {
+            editText[0][0].setError("This cannot be empty");
+            return;
+        }
 
 
 

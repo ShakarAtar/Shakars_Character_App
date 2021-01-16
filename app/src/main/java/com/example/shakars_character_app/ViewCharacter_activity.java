@@ -7,9 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -60,9 +60,10 @@ public class ViewCharacter_activity extends AppCompatActivity implements View.On
             View catRoot = getLayoutInflater().inflate(R.layout.category_title_view,content,false);
             LinearLayout cat_title_ll = catRoot.findViewById(R.id.cat_title_ll_view);
             cat_title_ll.removeAllViews();
-            TextView catTitleTv = catRoot.findViewById(R.id.viewCategoriesTV);
-            catTitleTv.setOnClickListener(this);
-            cat_title_ll.setTag(catIndex);
+            TextView catTitleTV = catRoot.findViewById(R.id.viewCategoriesTV);
+            catTitleTV.setText(CategoriesAndProperties.dataPC.categoriesPC[catIndex]);
+            catTitleTV.setOnClickListener(this);
+            catTitleTV.setTag(catIndex);
             content.addView(catRoot);
             categoriesLL.add(cat_title_ll);
             cat_title_ll.setVisibility(CategoriesAndProperties.foldedPC[catIndex] ? View.GONE : View.VISIBLE);
@@ -89,7 +90,6 @@ public class ViewCharacter_activity extends AppCompatActivity implements View.On
                 cat_title_ll.addView(root);
 
             }
-
 
         }
 
@@ -255,6 +255,8 @@ public class ViewCharacter_activity extends AppCompatActivity implements View.On
                         goalsTV.setText(goals);
                         backGroundTV.setText(backGround);
 
+                        documentID = name;
+
 
                     } else {
                         Log.d(TAG, "No such document");
@@ -264,6 +266,8 @@ public class ViewCharacter_activity extends AppCompatActivity implements View.On
                 }
             }
         });
+
+
 
 
 

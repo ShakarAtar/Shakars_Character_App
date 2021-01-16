@@ -9,8 +9,7 @@ import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.LinearLayout;;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,7 +29,7 @@ public class ViewNPC_activity extends AppCompatActivity implements View.OnClickL
     TextView[][] viewText;
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
     String documentID;
-    private static final String TAG = "ViewCharacterActivity";
+    private static final String TAG = "ViewNPCActivity";
     DocumentReference npcRef;
 
 
@@ -38,6 +37,11 @@ public class ViewNPC_activity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_npc);
+        Intent intent = getIntent();
+        documentID = intent.getStringExtra("DocumentID");
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        npcRef = db.collection("users").document("test")
+                .collection("npcs").document(documentID);
 
         title = findViewById(R.id.viewNPCTitle);
 
@@ -84,8 +88,12 @@ public class ViewNPC_activity extends AppCompatActivity implements View.OnClickL
                 hintTV.setTag(hintIndex);
 
                 cat_title_ll.addView(root);
+
             }
+
         }
+
+        getNPC();
 
 
     }
@@ -116,6 +124,8 @@ public class ViewNPC_activity extends AppCompatActivity implements View.OnClickL
             }
 
         }
+
+
 
     }
 
@@ -201,8 +211,8 @@ public class ViewNPC_activity extends AppCompatActivity implements View.OnClickL
                         //Personality
                         String personality = npc.getString("Personality");
                         String behaviour = npc.getString("BehaviourAndManner");
-                        String traits = npc.getString("npcTraits");
-                        String flaws = npc.getString("npcFlaws");
+                        String traits = npc.getString("CharacterTraits");
+                        String flaws = npc.getString("CharacterFlaws");
                         String quirks = npc.getString("Quirks");
                         String hobbies = npc.getString("Hobbies");
                         String strengths = npc.getString("StrengthsAndWeaknesses");
@@ -214,6 +224,7 @@ public class ViewNPC_activity extends AppCompatActivity implements View.OnClickL
                         String allies = npc.getString("AlliesAndContacts");
                         String enemies = npc.getString("Enemies");
                         String groups = npc.getString("AffiliatedGroups");
+                        //Goals and BG
                         String goals = npc.getString("CurrentGoals");
                         String backGround = npc.getString("BackgroundStory");
                         //NPC Only
@@ -263,6 +274,9 @@ public class ViewNPC_activity extends AppCompatActivity implements View.OnClickL
                         hooksTV.setText(hooks);
                         plotTV.setText(plot);
                         motivationsTV.setText(motivations);
+
+                        documentID = name;
+
 
                     } else  {
                         Log.d(TAG, "No such document");

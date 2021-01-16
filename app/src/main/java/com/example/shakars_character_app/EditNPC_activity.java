@@ -37,7 +37,7 @@ public class EditNPC_activity extends AppCompatActivity implements View.OnClickL
     EditText[][] editText;
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
     String documentID;
-    private static final String TAG = "ViewnpcActivity";
+    private static final String TAG = "EditNPCActivity";
     DocumentReference npcRef;
 
 
@@ -88,9 +88,11 @@ public class EditNPC_activity extends AppCompatActivity implements View.OnClickL
 
                 int hintIndex = propIndex;
                 if (hintIndex >= hints.length) {
-                    System.err.println("Missing hint for "+catIndex+", "+propIndex);
+                    System.err.println("Missing hint for " + catIndex + "+" + propIndex);
                     hintIndex = 0;
+
                 }
+
                 EditText hintTV = root.findViewById(R.id.hints);
                 editText[catIndex][propIndex] = hintTV;
                 hintTV.setHint(hints[hintIndex]);
@@ -119,7 +121,7 @@ public class EditNPC_activity extends AppCompatActivity implements View.OnClickL
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        startActivity(new Intent(EditNPC_activity.this, AllCharacters_activity.class));
+                        startActivity(new Intent(EditNPC_activity.this, AllNPCS_activity.class));
                     }
                 });
                 builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -153,6 +155,7 @@ public class EditNPC_activity extends AppCompatActivity implements View.OnClickL
             }
 
         }
+
 
     }
 
@@ -251,6 +254,7 @@ public class EditNPC_activity extends AppCompatActivity implements View.OnClickL
                         String allies = npc.getString("AlliesAndContacts");
                         String enemies = npc.getString("Enemies");
                         String groups = npc.getString("AffiliatedGroups");
+                        //Goals and BG
                         String goals = npc.getString("CurrentGoals");
                         String backGround = npc.getString("BackgroundStory");
                         //NPC Only
@@ -309,6 +313,7 @@ public class EditNPC_activity extends AppCompatActivity implements View.OnClickL
                 }
             }
         });
+
 
     }
 
