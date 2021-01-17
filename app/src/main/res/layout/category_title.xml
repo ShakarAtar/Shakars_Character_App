@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    tools:layout_editor_absoluteX="1dp"
+    tools:showIn="@layout/new_character">
+
+    <TextView
+        android:id="@+id/categoriesTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hyphenationFrequency="none"
+        android:text="@string/basic"
+        android:textAlignment="center"
+        android:textColor="?attr/textColour"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/cat_title_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical">
+
+
+
+        <include layout="@layout/category_property" />
+
+    </LinearLayout>
+
+</LinearLayout>

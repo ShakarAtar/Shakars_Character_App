@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+
+    //Purple Theme
+    <color name="purpleBackgroundColour">#512A70</color>
+    <color name="purpleTextColour">#EBEBEB</color>
+    <color name="purpleButtonColour">#050505</color>
+    <color name="purpleTextFieldColour">#99221F3B</color>
+    <color name="purpleOverlayColour">#3B234F</color>
+    <color name="purpleHintColour">#9C71BF</color>
+
+
+    //Green Theme
+    <color name="greenBackgroundColour">#398E01</color>
+    <color name="greenTextColour">#FFFFFF</color>
+    <color name="greenButtonColour">#2C6301</color>
+    <color name="greenTextFieldColour">#99193900</color>
+    <color name="greenOverlayColour">#5BE200</color>
+    <color name="greenHintColour">#3B234F</color>
+
 </resources>

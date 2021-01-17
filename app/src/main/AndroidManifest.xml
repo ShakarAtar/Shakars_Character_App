@@ -8,14 +8,56 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/purpleTheme">
+        <activity android:name=".Login_activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AllCharacters_activity">
+
+        </activity>
+        <activity android:name=".AllNotes_activity">
+
+        </activity>
+        <activity android:name=".AllNPCS_activity">
+
+        </activity>
+        <activity android:name=".CreateUser_activity">
+
+        </activity>
+        <activity android:name=".EditCharacter_activity">
+
+        </activity>
+        <activity android:name=".EditNPC_activity">
+
+        </activity>
+        <activity android:name=".FrontPage_activity">
+
+        </activity>
+        <activity android:name=".MyProfile_activity">
+
+        </activity>
+        <activity android:name=".NewCharacter_activity">
+
+        </activity>
+        <activity android:name=".NewNPC_activity">
+
+        </activity>
+        <activity android:name=".Setting_activity">
+
+        </activity>
+        <activity android:name=".ViewCharacter_activity">
+
+        </activity>
+        <activity android:name=".ViewNPC_activity">
+
+        </activity>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

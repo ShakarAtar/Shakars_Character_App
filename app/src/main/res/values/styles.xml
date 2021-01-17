@@ -1,10 +1,27 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="AppTheme" parent="Theme.AppCompat">
+
+    </style>
+
+    <style name="purpleTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="background">@color/purpleBackgroundColour</item>
+        <item name="textColour">@color/purpleTextColour</item>
+        <item name="buttonColour">@color/purpleButtonColour</item>
+        <item name="textFieldColour">@color/purpleTextFieldColour</item>
+        <item name="overlayColour">@color/purpleOverlayColour</item>
+        <item name="hintColour">@color/purpleHintColour</item>
+
+    </style>
+
+    <style name="greenTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="background">@color/greenBackgroundColour</item>
+        <item name="textColour">@color/greenTextColour</item>
+        <item name="buttonColour">@color/greenButtonColour</item>
+        <item name="textFieldColour">@color/greenTextFieldColour</item>
+        <item name="overlayColour">@color/greenOverlayColour</item>
+        <item name="hintColour">@color/greenHintColour</item>
+
     </style>
 
 </resources>

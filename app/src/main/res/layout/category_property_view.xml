@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    tools:layout_editor_absoluteX="1dp"
+    tools:showIn="@layout/view_character">
+
+    <TextView
+        android:id="@+id/viewPropertiesTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hyphenationFrequency="none"
+        android:paddingBottom="4dp"
+        android:textColor="?attr/textColour"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/viewHints"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/overlayColour"
+        android:ems="10"
+        android:gravity="start|top"
+        android:lines="3"
+        android:textColor="?attr/textColour"
+        android:textColorHint="?attr/hintColour"
+        android:textSize="18sp" />
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/npcListLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:showIn="@layout/npc_list">
+
+    <TextView
+        android:id="@+id/npcListTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16sp"
+        android:hyphenationFrequency="none"
+        android:paddingBottom="4dp"
+        android:text="@string/characterName"
+        android:textColor="?attr/textColour"
+        android:textSize="18sp" />
+
+</LinearLayout>
