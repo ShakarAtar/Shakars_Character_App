@@ -7,9 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +19,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -28,9 +32,12 @@ import java.util.Objects;
 
 public class AllCharacters_activity extends AppCompatActivity implements View.OnClickListener {
 
-    Button newCharButton;
+    Button newCharButton, search;
     ImageButton settings;
     TextView newCharTV, title;
+    EditText characterNameET;
+    Boolean exists = false;
+    Toast toast;
     TextView[] characterEntries;
     String documentID;
     List<String> list;
@@ -51,6 +58,11 @@ public class AllCharacters_activity extends AppCompatActivity implements View.On
         settings = findViewById(R.id.characterListOverlayButton);
         //        settings.setOnClickListener(this);
         settings.setVisibility(View.INVISIBLE);
+
+        search = findViewById(R.id.characterListSearchButton);
+        search.setOnClickListener(this);
+
+        characterNameET = findViewById(R.id.characterListSearchField);
 
         newCharTV = findViewById(R.id.characterListCreateNewCharacterTV);
         newCharTV.setOnClickListener(this);
@@ -97,7 +109,43 @@ public class AllCharacters_activity extends AppCompatActivity implements View.On
             Intent intent = new Intent(v.getContext(), NewCharacter_activity.class);
             v.getContext().startActivity(intent);
 
+        } if (search.getId() == v.getId()) {
+            v.startAnimation(buttonClick);
+            searchCharacter();
+            if (exists) {
+                Intent intent = new Intent(v.getContext(), ViewCharacter_activity.class);
+                intent.putExtra("DocumentID", documentID);
+                v.getContext().startActivity(intent);
+            }
         }
+
+    }
+
+    private void searchCharacter() {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        documentID = characterNameET.getText().toString();
+        DocumentReference characterRef;
+        characterRef = db.collection("users").document("test")
+                .collection("characters").document(documentID);
+        characterRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot character = task.getResult();
+                    assert character != null;
+                    if (character.exists()) {
+                             exists = true;
+
+
+                    } else {
+                        Log.d(TAG, "No such document");
+                        toast = Toast.makeText(getApplicationContext(), "Sorry, no character with that name",Toast.LENGTH_LONG); toast.show();
+                    }
+                } else {
+                    Log.d(TAG, "get failed with ", task.getException());
+                }
+            }
+        });
 
     }
 

@@ -16,6 +16,7 @@
     <string name="NPCs">NPCs</string>
     <string name="notes">Notes</string>
     <string name="shared">Shared</string>
+    <string name="search" translatable="false">Search</string>
     <string name="done">Done</string>
     //Login text
     <string name="forgotPassword">Forgot Password?</string>
@@ -32,11 +33,13 @@
     <string name="createNewUser">Create New User</string>
     //Characters
     <string name="createNewChar">Create New Character</string>
+    <string name="characterLookup" translatable="false">Input character name and click search</string>
     <string name="newCharacter">New Character</string>
     <string name="viewCharacter">View Character</string>
     <string name="editCharacter">Edit Character</string>
     //NPCs
     <string name="createNewNPC">Create New NPC</string>
+    <string name="npcLookup" translatable="false">Input npc name and click search</string>
     <string name="newNPC">New NPC</string>
     <string name="viewNPC">View NPC</string>
     <string name="editNPC">Edit NPC</string>

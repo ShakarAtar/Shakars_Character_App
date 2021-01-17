@@ -12,10 +12,13 @@
         android:id="@+id/NPCListScroll"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="100dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/NPCListCreateNewNPCTV"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintVertical_bias="0.0">
 
         <include layout="@layout/npc_list_entries" />
     </ScrollView>
@@ -73,5 +76,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.196" />
+
+    <EditText
+        android:id="@+id/npcListSearchField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:clickable="true"
+        android:hint="@string/npcLookup"
+        android:textColor="?attr/textColour"
+        android:textColorHint="?attr/hintColour"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/NPCListScroll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NPCListCreateNewNPCTV"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/npcListSearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search"
+        android:background="?attr/buttonColour"
+        android:textColor="?attr/textColour"
+        app:layout_constraintBottom_toTopOf="@+id/NPCListScroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toEndOf="@+id/npcListSearchField"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.761" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
