@@ -8,8 +8,8 @@
     <string name="app_name" translatable="false">Loot Goblin\'s Reliquary</string>
     //Text all over the app
     <string name="appTitle" translatable="false">Loot Goblin\'s Reliquary</string>
-    <string name="email" translatable="false">Email</string>
-    <string name="password">Password</string>
+    <string name="email" translatable="false">test</string>
+    <string name="password">test</string>
     <string name="edit">Edit</string>
     <string name="save">Save</string>
     <string name="characters">Characters</string>
