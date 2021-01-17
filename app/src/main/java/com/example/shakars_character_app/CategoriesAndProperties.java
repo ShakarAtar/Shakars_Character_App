@@ -32,7 +32,7 @@ public class CategoriesAndProperties {
                 {R.string.personality, R.string.behaviourAndManners, R.string.characterTraits, R.string.characterFlaws, R.string.quirks, R.string.hobbies, R.string.strengthsAndWeaknesses, R.string.wantsAndDesires, R.string.fearsAndInsecurities, R.string.secrets},
                 {R.string.family, R.string.alliesAndContacts,R.string.enemies, R.string.affiliatedGroups},
                 {R.string.currentGoals,R.string.backgroundStory},
-                {R.string.specialAbilities, R.string.partOfWorld, R.string.hooksToPlayers, R.string.plotHooksSuggestions, R.string.motivations}
+                {R.string.specialAbilities, R.string.partOfWorld, R.string.hooksToPlayers, R.string.plotHooks, R.string.motivations}
         };
 
         int [][] hintsNPC = {

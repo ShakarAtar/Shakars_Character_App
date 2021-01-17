@@ -23,7 +23,7 @@
     <string name="race">Race</string>
     <string name="raceSuggestion">Menneske, Elver, Cyborg, Varulv, Serpentfolk</string>
     <string name="gender">Køn</string>
-    <string name="genderSuggestion">Mand, Kvinde, Kønsløs, Apache Angrebs Helikopter</string>
+    <string name="genderSuggestion">Mand, Kvinde, Kønsløs</string>
     <string name="age">Alder</string>
     <string name="ageSuggestion">16,396,4590</string>
     <string name="nationality">Nationalitet</string>
@@ -47,7 +47,7 @@
     <string name="hair">Hår</string>
     <string name="hairSuggestion">Blond, Rødt, Grønt, Langt, Bølget, Pigget, Flettet, Hanekam</string>
     <string name="scent">Duft</string>
-    <string name="scentSuggestion">Appelsiner og Vanilje, Muskus, Rådnende, Mandigt, Roser, Gevær Olie</string>
+    <string name="scentSuggestion">Appelsiner og Vanilje, Muskus, Rådnende, Roser, Gevær Olie</string>
     <string name="characteristicFeatures">Unikke Træk</string>
     <string name="characteristicFeaturesSuggestions">Tattoveringer, Ar, Modersmærker, Horn, Klovbærende Fødder, Gæller</string>
     <string name="personality">Personlighed</string>
@@ -63,9 +63,9 @@
     <string name="hobbies">Hobbier</string>
     <string name="hobbiesSuggestions">Fisker, Samler på Krystaller, Roder Med Laservåben, Synger, Programmerer</string>
     <string name="strengthsAndWeaknesses">Stryker og Svagheder</string>
-    <string name="strengthsAndWeaknessesSuggestions">Stærk Moralsk Sans, Bløder, Svage Lunger, Guddommelig Styrke, Medfølende</string>
+    <string name="strengthsAndWeaknessesSuggestions">Stærk Moralsk Sans, Svage Lunger, Guddommelig Styrke, Medfølende</string>
     <string name="wantsAndDesires">Ønsker og Lyster</string>
-    <string name="wantsAndDesiresSuggestions">At Nogen Acceptere Bæstet Indeni, At Vinde i Lotto, At Finde Nogen at Elske, At Blive Bundet Fast og Afstraffet</string>
+    <string name="wantsAndDesiresSuggestions">At Nogen Acceptere Bæstet Indeni, At Vinde i Lotto, At Finde Nogen at Elske</string>
     <string name="fearsAndInsecurities">Frygte og Usikkerheder</string>
     <string name="fearsAndInsecuritiesSuggestions">EDDERKOPPER, Ikke at Føle Sig Værdig Til at Få Kærlighed, Miste en af Sine Nærmeste, Tænke at Man Ikke er Gode Nok, At Dø</string>
     <string name="secrets">Hemmeligheder</string>
@@ -73,17 +73,17 @@
     <string name="family">Familie</string>
     <string name="familySuggestions">Mor, Far, Søskende, Onkler, Kusiner, Onde Tvillinger</string>
     <string name="alliesAndContacts">Allierede og Kontakter</string>
-    <string name="alliesAndContactsSuggestions">"Politikommisær Gonzales fra NYPD, Lysksy "</string>
+    <string name="alliesAndContactsSuggestions">"Politikommisær Gonzales fra NYPD, Lysksy Drug Dealer, Loki Laufeyson, President of The Intergalatic Agency"</string>
     <string name="enemies">Fjender</string>
     <string name="enemiesSuggestions">Avengers, Mafiaen, En Vampyr Klan, Hertugen, Din Søster, Den der Ene Skjald i Kroen</string>
     <string name="affiliatedGroups">Tilknyttet Grupper</string>
     <string name="affiliatedGroupsSuggestions">Hydra, Tyve Guilden, Paladin Ordenen, Månens Børn, The Wanderers Of The Unbeaten Path</string>
     <string name="currentGoals">Nuværende Mål</string>
-    <string name="currentGoalsSuggestions">Få Lokket den Lækre Kropige med i Seng, Redde Prinssessen, Hævne Din Fars Død</string>
+    <string name="currentGoalsSuggestions">Redde Prinssessen, Hævne Din Fars Død</string>
     <string name="backgroundStory">Baggrundshistorie</string>
     <string name="backgroundStorySuggestions">Den Kan Variere Fra: En Orc Dræbte Min Familie Til, Jeg er Den Trettende Søn af Den Trettende Søn, og Det er Min Skæbne Til at Udrydde Alt Ondt, Eller Det Kan Være Så Simpelt Som, Jeg Har Stadig Mine Forældre og Jeg Vil Virkelig Bare Gerne på Enventyr</string>
     <string name="specialAbilities">Special Abilties</string>
-    <string name="specialAbilitiesSuggestions">Døds Laser Øjne, Charmer Hvad Som Helst, Super Fart, Fucking Sneaky</string>
+    <string name="specialAbilitiesSuggestions">Døds Laser Øjne, Charmer Hvad Som Helst, Super Fart, Meget Listig</string>
     <string name="partOfWorld">Hvordan Er De En Del af Verden?</string>
     <string name="partOfWorldSuggestion">Er Quest Giveren, Bor i Den Næste By Gruppen Tager Til, Er En Vampyr Jæger Som Er Gift Med En Bard , Leder Af Den Organisation Gruppen Er En Del Af</string>
     <string name="hooksToPlayers">Hooks til Spillere</string>
@@ -104,13 +104,13 @@
     <string name="newNPC">Ny NPC</string>
     <string name="voice">Stemme</string>
     <string name="voiceSuggestion">Sensuel, Rolig og Dyb, Kradset, Gammel, Jamaicansk accent</string>
-    <string name="titleKenningMonikerSuggestion">Hertug, Den Stærke, Høj Præstinde, Bastard Prinsen, Forførersken</string>
+    <string name="titleKenningMonikerSuggestion">Hertug, Den Stærke, Høj Præstinde, Bastard Prinsen</string>
     <string name="viewCharacter">Vis Character</string>
     <string name="editCharacter">Rediger Character</string>
     <string name="viewNPC">Vis NPC</string>
     <string name="editNPC">Rediger NPC</string>
     <string name="done">Færdig</string>
     <string name="createNewUser">Lav Ny Bruger</string>
-    <string name="traitsAttracted">Tiltrukket af Træk</string>
+    <string name="traitsAttracted">Tiltrukket af</string>
     <string name="traitsAttractedSuggestion">Specifikke Racer, Personlighedstræk, Fysiske Træk, Væremåder</string>
 </resources>
