@@ -128,6 +128,11 @@ public class ViewCharacter_activity extends AppCompatActivity implements View.On
 
     }
 
+    public void onBackPressed() {
+        Intent intent = new Intent(ViewCharacter_activity.this, AllNPCS_activity.class);
+        startActivity(intent);
+    }
+
     private void getCharacter() {
 
         //Basic

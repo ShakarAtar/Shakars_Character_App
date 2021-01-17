@@ -128,6 +128,14 @@ public class ViewNPC_activity extends AppCompatActivity implements View.OnClickL
 
 
 
+
+
+
+    }
+
+    public void onBackPressed() {
+        Intent intent = new Intent(ViewNPC_activity.this, AllCharacters_activity.class);
+        startActivity(intent);
     }
 
     ArrayList<View> categoriesLL = new ArrayList<>();

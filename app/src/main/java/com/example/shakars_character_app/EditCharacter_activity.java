@@ -182,6 +182,8 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
 
     }
 
+
+
     ArrayList<View> categoriesLL = new ArrayList<>();
 
     private void getCharacter() {
