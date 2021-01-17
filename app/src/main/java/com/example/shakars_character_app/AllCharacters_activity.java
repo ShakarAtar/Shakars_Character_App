@@ -70,7 +70,6 @@ public class AllCharacters_activity extends AppCompatActivity implements View.On
         getAllCharacters();
 
 
-        characterEntries = new TextView[list.size()];
 
         for (int charIndex = 0; charIndex < list.size(); charIndex++) {
             System.out.println("reached listfiller");
@@ -120,22 +119,7 @@ public class AllCharacters_activity extends AppCompatActivity implements View.On
                     }
                 });
 
-//        query.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-//            @Override
-//            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-//                if (task.isSuccessful()) {
-//                    for (QueryDocumentSnapshot document : Objects.requireNonNull(task.getResult())) {
-//                        list.add(document.getId());
-//                        Log.d(TAG, list.toString());
-//
-//                    }
-//
-//                } else {
-//                    Log.d(TAG, "Error getting documents: ", task.getException());
-//                }
-//            }
-//
-//        });
+
 
         System.out.println("Left the database getter");
 
