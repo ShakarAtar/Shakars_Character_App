@@ -185,10 +185,25 @@ public class NewCharacter_activity extends AppCompatActivity implements View.OnC
 
     ArrayList<View> categoriesLL = new ArrayList<>();
 
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("End character creation.");
+        builder.setMessage("You are about to end character creation.\nYou will be sent back to the front page.\nAre you sure you want to finish?");
+        builder.setCancelable(true);
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                startActivity(new Intent(NewCharacter_activity.this, AllCharacters_activity.class));
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
 
-
-
-
+            }
+        });
+    }
 
     private void sendCharacter() {
         //Basic

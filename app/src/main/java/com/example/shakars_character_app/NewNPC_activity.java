@@ -107,7 +107,7 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(final View v) {
-        if (save.getId() == v.getId()) {
+        if (save.getId() == v.getId() ) {
             v.startAnimation(buttonClick);
             sendNPC();
             if (TextUtils.equals(documentID,"")) {
@@ -172,7 +172,27 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("End character creation.");
+        builder.setMessage("You are about to end character creation.\nYou will be sent back to the front page.\nAre you sure you want to finish?");
+        builder.setCancelable(true);
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                startActivity(new Intent(NewNPC_activity.this, AllNPCS_activity.class));
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
 
+            }
+        });
+        builder.show();
+    }
 
     ArrayList<View> categoriesLL = new ArrayList<>();
 

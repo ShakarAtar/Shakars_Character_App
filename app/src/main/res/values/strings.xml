@@ -112,7 +112,7 @@
     //Relations
     <string name="relations">Relations</string> //Category
     <string name="family">Family</string>
-    <string name="familySuggestions">Mother, Father, Siblings, Uncles, Cousins, Evil Twins</string>
+    <string name="familySuggestions">Mother, Father, Siblings, Uncles, Cousins, Evil Twin</string>
     <string name="alliesAndContacts">Allies and Contacts</string>
     <string name="alliesAndContactsSuggestions">Police Sergeant Gonzalez from NYPD, Shady Drugdealer, Loki Laufeyson, President of The Intergalatic Agency</string>
     <string name="enemies">Enemies</string>

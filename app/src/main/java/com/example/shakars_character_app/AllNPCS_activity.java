@@ -76,6 +76,12 @@ public class AllNPCS_activity extends AppCompatActivity implements View.OnClickL
 
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(AllNPCS_activity.this, FrontPage_activity.class);
+        startActivity(intent);
+    }
+
     private void searchCharacter() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         documentID = npcNameET.getText().toString();

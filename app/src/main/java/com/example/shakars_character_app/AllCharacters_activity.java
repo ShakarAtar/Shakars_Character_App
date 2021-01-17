@@ -149,6 +149,12 @@ public class AllCharacters_activity extends AppCompatActivity implements View.On
 
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(AllCharacters_activity.this, FrontPage_activity.class);
+        startActivity(intent);
+    }
+
     private void getAllCharacters() {
 
         query.get()
