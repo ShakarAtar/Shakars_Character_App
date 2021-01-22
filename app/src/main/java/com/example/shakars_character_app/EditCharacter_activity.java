@@ -108,10 +108,10 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
                 cat_title_ll.addView(root);
             }
 
-            getCharacter();
 
         }
 
+        getCharacter();
 
     }
 

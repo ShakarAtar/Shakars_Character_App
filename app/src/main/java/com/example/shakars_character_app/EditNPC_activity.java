@@ -110,10 +110,10 @@ public class EditNPC_activity extends AppCompatActivity implements View.OnClickL
                 cat_title_ll.addView(root);
             }
 
-            getNPC();
 
         }
 
+        getNPC();
 
     }
 
