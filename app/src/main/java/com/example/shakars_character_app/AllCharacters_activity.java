@@ -56,7 +56,7 @@ public class AllCharacters_activity extends AppCompatActivity implements View.On
         newCharButton.setOnClickListener(this);
 
         settings = findViewById(R.id.characterListOverlayButton);
-        //        settings.setOnClickListener(this);
+        settings.setOnClickListener(this);
         settings.setVisibility(View.INVISIBLE);
 
         search = findViewById(R.id.characterListSearchButton);
@@ -73,13 +73,13 @@ public class AllCharacters_activity extends AppCompatActivity implements View.On
         characterList.removeAllViews();
 
         list = new ArrayList<>();
-//        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-//        query = db.collection("users").document("test").collection("characters").orderBy("Name").limit(10);
+        query = db.collection("users").document("test").collection("characters").orderBy("Name").limit(10);
 
 
 
-//        getAllCharacters();
+        getAllCharacters();
 
 
 
