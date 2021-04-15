@@ -43,11 +43,11 @@ public class FrontPage_activity extends AppCompatActivity implements View.OnClic
         npcs.setOnClickListener(this);
 
         notes = findViewById(R.id.frontPageNotesButton);
-//        notes.setOnClickListener(this);
+        notes.setOnClickListener(this);
         notes.setVisibility(View.INVISIBLE);
 
         settings = findViewById(R.id.frontPageOverlayButton);
-//        settings.setOnClickListener(this);
+        settings.setOnClickListener(this);
         settings.setVisibility(View.INVISIBLE);
 
         charactersTVClick = findViewById(R.id.frontPageCharactersText);
@@ -57,7 +57,7 @@ public class FrontPage_activity extends AppCompatActivity implements View.OnClic
         npcsTVClick.setOnClickListener(this);
 
         notesTVClick = findViewById(R.id.frontPageNotesText);
-//        notesTVClick.setOnClickListener(this);
+        notesTVClick.setOnClickListener(this);
         notesTVClick.setVisibility(View.INVISIBLE);
 
 

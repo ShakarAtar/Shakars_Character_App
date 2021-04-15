@@ -49,7 +49,7 @@ public class ViewCharacter_activity extends AppCompatActivity implements View.On
         edit.setOnClickListener(this);
 
         settings = findViewById(R.id.viewCharacterOverlayButton);
-        //        settings.setOnClickListener(this);
+        settings.setOnClickListener(this);
         settings.setVisibility(View.INVISIBLE);
 
         ViewGroup content = findViewById(R.id.viewCharacterLayout);

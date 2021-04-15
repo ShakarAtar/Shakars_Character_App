@@ -24,19 +24,20 @@ public class Login_activity extends AppCompatActivity implements View.OnClickLis
     SharedPreferences sharedPref;
     String currentTheme, sharedPreference;
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-
+        mAuth = FirebaseAuth.getInstance();
 
         //Buttons
         login = findViewById(R.id.loginButton);
         login.setOnClickListener(this);
         createUser = findViewById(R.id.loginCreateUser);
-//        createUser.setOnClickListener(this);
+        createUser.setOnClickListener(this);
         createUser.setVisibility(View.INVISIBLE);
 
         //Text Fields
@@ -54,7 +55,12 @@ public class Login_activity extends AppCompatActivity implements View.OnClickLis
 
     }
 
-
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        updateUI(currentUser);
+    }
 
     @Override
     public void onClick(View v) {
@@ -69,6 +75,10 @@ public class Login_activity extends AppCompatActivity implements View.OnClickLis
             Intent intent = new Intent(v.getContext(),CreateUser_activity.class);
             v.getContext().startActivity(intent);
         }
+
+    }
+
+    private void updateUI(FirebaseUser user) {
 
     }
 }

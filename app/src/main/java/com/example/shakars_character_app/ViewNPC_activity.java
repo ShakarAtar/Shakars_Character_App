@@ -49,7 +49,7 @@ public class ViewNPC_activity extends AppCompatActivity implements View.OnClickL
         edit.setOnClickListener(this);
 
         settings = findViewById(R.id.viewNPCOverlayButton);
-        //        settings.setOnClickListener(this);
+        settings.setOnClickListener(this);
         settings.setVisibility(View.INVISIBLE);
 
         ViewGroup content = findViewById(R.id.viewNPCLayout);

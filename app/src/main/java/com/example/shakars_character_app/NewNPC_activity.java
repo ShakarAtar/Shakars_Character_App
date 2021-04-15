@@ -52,7 +52,7 @@ public class NewNPC_activity extends AppCompatActivity implements View.OnClickLi
         save.setOnClickListener(this);
 
         settings = findViewById(R.id.newNPCOverlayButton);
-        //        settings.setOnClickListener(this);
+        settings.setOnClickListener(this);
         settings.setVisibility(View.INVISIBLE);
 
         loading = findViewById(R.id.newNPCLoadAnimation);

@@ -61,7 +61,7 @@ public class EditCharacter_activity extends AppCompatActivity implements View.On
         save.setOnClickListener(this);
 
         settings = findViewById(R.id.editOverlayButton);
-        //        settings.setOnClickListener(this);
+        settings.setOnClickListener(this);
         settings.setVisibility(View.INVISIBLE);
 
         loading = findViewById(R.id.editCharacterLoadAnimation);
