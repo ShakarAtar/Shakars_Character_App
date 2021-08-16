@@ -3,6 +3,7 @@ package com.example.shakars_character_app;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
@@ -10,21 +11,26 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Login_activity extends AppCompatActivity implements View.OnClickListener {
 
     Button login, createUser;
-    TextView title, username, password, forgotPassword;
+    TextView titleTV, usernameTV, passwordTV, forgotPasswordTV;
     EditText usernameInput, passwordInput;
     SharedPreferences sharedPref;
     String currentTheme, sharedPreference;
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
     private FirebaseAuth mAuth;
+    String email, password;
+    private static final String TAG = "LoginActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +47,11 @@ public class Login_activity extends AppCompatActivity implements View.OnClickLis
         createUser.setVisibility(View.INVISIBLE);
 
         //Text Fields
-        title = findViewById(R.id.loginAppTitle);
-        username = findViewById(R.id.loginPageUsernameText);
-        password = findViewById(R.id.loginPasswordText);
-        forgotPassword = findViewById(R.id.loginForgotPasswordClickable);
-        forgotPassword.setOnClickListener(this);
+        titleTV = findViewById(R.id.loginAppTitle);
+        usernameTV = findViewById(R.id.loginPageUsernameText);
+        passwordTV = findViewById(R.id.loginPasswordText);
+        forgotPasswordTV = findViewById(R.id.loginForgotPasswordClickable);
+        forgotPasswordTV.setOnClickListener(this);
 
         //Edit Text Fields
         usernameInput = findViewById(R.id.loginUsernameEditText);
@@ -56,10 +62,13 @@ public class Login_activity extends AppCompatActivity implements View.OnClickLis
     }
 
     @Override
-    protected void onStart() {
+    public void onStart() {
         super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
+        if(currentUser != null){
+            currentUser.reload();
+        }
     }
 
     @Override
@@ -79,6 +88,29 @@ public class Login_activity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void updateUI(FirebaseUser user) {
+
+    }
+
+    private void loginUser() {
+
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d(TAG, "signInWithEmail:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            updateUI(user);
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w(TAG, "signInWithEmail:failure", task.getException());
+                            Toast.makeText(Login_activity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                            updateUI(null);
+                        }
+                    }
+                });
 
     }
 }
